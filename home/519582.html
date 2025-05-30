@@ -1,0 +1,54 @@
+<!--
+title: Configurar emissão de NFSe com API para GeisWeb - Confisa Sistemas
+description: 
+published: true
+date: 2025-05-28T19:48:33.303Z
+tags: 
+editor: ckeditor
+dateCreated: 2025-04-15T17:53:46.543Z
+-->
+
+<h1>Configurar emissão de NFSe com API para GeisWeb - Confisa Sistemas</h1>
+<p>Neste artigo veremos como configurar o sistema para emitir NFS-e em servidores <strong>GeisWeb</strong>, quando ele utilizar a API do <strong>ACBr</strong>.</p>
+<p>&nbsp;</p>
+<p>O sistema permite transmitir NFS-e para prefeituras utilizando a API do <strong>ACBr</strong>, a qual permite a transmissão de notas para quaisquer prefeituras que utilizem essa API, dispensando programações específicas para cada uma.</p>
+<p>&nbsp;</p>
+<p>Para configurarmos o sistema, devemos configurar os campos de NFS-e contidos na filial, as quais podem ser acessadas através da aba <strong>'Configurações Adicionais'</strong> e subaba <strong>'Diversas'</strong>. Para localizar as configurações, basta clicar no campo <strong>'Descrição'</strong> e digitar <strong>'nfse'</strong>, apertando <strong>F3</strong> para filtrar.</p>
+<figure class="image"><img src="/519582/img_1.gif"></figure>
+<p><strong>Figura 1:</strong> Configurações de API para NFS-e.</p>
+<p>&nbsp;</p>
+<p><strong>- NFSEIBGEPROVEDOR:</strong> Essa configuração é que vai saber para qual provedor da prefeitura será transmitido a nota (<strong>GeisWeb</strong>, <strong>4R</strong>, <strong>DeISS</strong>, etc).</p>
+<p><strong>- NFSETIPOLANCTO:</strong> Essa informação deve ser solicitada na prefeitura, ou terá informações no próprio manual de integração.</p>
+<p><strong>- NFSECODTRIBUTACAO:</strong> Essa informação deve ser solicitada na prefeitura, ou terá informações no próprio manual de integração.</p>
+<p><strong>- NFSETIPOOPTANTESN:</strong> Informar o tipo de optante.</p>
+<p><strong>- NFSEVERSAOPROVEDOR:</strong> Nem sempre é necessário, apenas se tiver uma versão em especifico.</p>
+<p><strong>- NFSESITUACAOTRIB:</strong> Nem sempre é necessário, apenas se tiver no layout.</p>
+<p>- <strong>NFSEAPIACBR:</strong> Deixar como <strong>'Sim'</strong> para enviar NFS-e para prefeitura através da API do ACBR</p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Caso a empresa seja <strong>Regime normal</strong>, &nbsp;é preciso escolher a opção <strong>'Outros'</strong> para emissão de NFS-e em <strong>GeisWeb</strong>.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Após feitas as alterações necessárias no sistema, deve-se fechar e iniciá-lo novamente.</span></p>
+<p>&nbsp;</p>
+<p><strong>DEMAIS INFORMAÇÕES:</strong></p>
+<p>- Ter o certificado digital tipo A1 (.pfx) informado na filial;</p>
+<p>- Informar a Inscrição Municipal da empresa na aba ;</p>
+<figure class="image"><img src="/519582/img_2.png"></figure>
+<p><strong>Figura 2:</strong> Inscrição Municipal.</p>
+<p>&nbsp;</p>
+<p>- O código do serviço da nota fiscal que é mandado no layout é o <strong>Código da ISSQN</strong> da nota. Para que &nbsp;sistema transmita a nota e receba autorização, é preciso que seja informado o <strong>ISSQN</strong> aceito pela prefeitura. Essa informação você deve ser pega direto com a prefeitura ou contador, pois cada uma pode ter um código especifico.</p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Deve-se também <strong>enviar um e-mail para o suporte da GeisWeb</strong> no e-mail </span><a href="mailto:suporte@geisweb.com.br"><span style="font-family:Arial, Helvetica, sans-serif;"><strong>suporte@geisweb.com.br</strong></span></a><span style="font-family:Arial, Helvetica, sans-serif;">, conforme modelo abaixo.&nbsp;</span><br>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Assunto: Solicitação de Liberação do WebService para Emissão de NFSe</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Olá Juliana,</span><br>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Gostaria de solicitar a liberação do uso do WebService para o meu CNPJ, a fim de viabilizar a emissão da Nota Fiscal de Serviço.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">CNPJ: xxxxxxxxxxxx</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Nosso sistema ERP já foi homologado e está operando normalmente. Segue o link para referência:</span></p>
+<p><a href="https://confisa.com.br/v1/"><span style="font-family:Arial, Helvetica, sans-serif;">https://confisa.com.br/v1/</span></a></p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Fico no aguardo da confirmação. Desde já, agradeço sua atenção.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">Atenciosamente,</span></p>
+<p><span style="font-family:Arial, Helvetica, sans-serif;">[Seu Nome]</span></p>
