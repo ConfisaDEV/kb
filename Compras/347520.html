@@ -1,0 +1,29 @@
+<!--
+title: Atualização de preço por subgrupo no recebimento de compra
+description: 
+published: true
+date: 2025-08-14T17:29:50.746Z
+tags: 
+editor: ckeditor
+dateCreated: 2025-08-14T17:29:50.746Z
+-->
+
+<p><br><br>A funcionalidade de atualizar o preço por subgrupo no recebimento de compra serve para casos específicos onde vários produtos irão necessariamente sofrer as mesmas alterações de preço sempre, sem exceção.<br><br>Os produtos envolvidos podem ter&nbsp;preços iguais ou não. O que vale para essa regra é que o aumento ou redução <strong>percentual</strong> de valor será proporcionalmente aplicado aos produtos do mesmo subgrupo.<br><br>Mostraremos mais adiante um exemplo dessa situação.<br><br><br><strong>Atenção, importante!</strong><br>Antes de ativar ou desativar essa funcionalidade, faça uma análise detalhada do seu modelo de negócio para definir se esse comportamento do sistema realmente é conveniente para o seu caso, e converse antes com&nbsp;a equipe de suporte, indicando sua intenção de&nbsp;ativar ou desativar a funcionalidade, para receber as orientações necessárias. Qualquer alteração feita nesse sentido fica gravada em LOG e é de&nbsp;total responsabilidade do usuário do sistema.<br><br><br><strong>Pré-requisitos para utilizar essa funcionalidade:</strong></p>
+<p><strong>a)</strong> Módulo <strong>'COM0005 - Recebimento de compra'</strong>&nbsp;contratado em seu sistema. Em caso de dúvidas, consulte nosso Comercial pelo WhatsApp no número (15)99198-6002 para informações sobre os planos que contém esse módulo;</p>
+<p><strong>b)</strong> Permissão de acesso ao módulo <strong>'COM0005 - Recebimento de compra'</strong>&nbsp;para o usuário que irá fazer o procedimento;</p>
+<p><strong>c)</strong> Permissão de acesso ao processo <strong>'PRC0147 - Atualiza preço de produtos por subgrupo na compra'</strong>&nbsp;para o usuário que irá fazer o procedimento.<br><br><strong>Observação.: </strong>No final desse artigo você encontrará&nbsp;a seção de&nbsp;links relacionados, com o material de ajuda sobre como gerenciar as permissões de usuário entre outros procedimentos.<br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Figura 1:</strong> Permissão do processo PRC0147<br><br><br><strong>Como funciona:</strong><br><br>Primeiramente os produtos devem fazer parte do mesmo subgrupo. <a href="http://kb.confisa.com.br:3000/pt-br/Cadastros/474017"><strong>Clique aqui</strong></a><strong> </strong>para saber mais sobre o <strong>cadastro de SubGrupo:</strong><br>&nbsp;</p>
+<p>&nbsp;</p>
+<p><br><strong>Figura 2:</strong> Cadastro de subgrupo<br><br><br><strong>Exemplo:</strong>&nbsp;Uma coleção de cadernos do mesmo fornecedor, todos seguindo as mesmas regras de preço, apenas com cores de capas diferentes.<br>Quando um caderno tiver alteração de preço, sabe-se que todos os demais da mesma coleção irão seguir a mesma alteração na mesma proporção.<br>&nbsp;</p>
+<p>&nbsp;</p>
+<p><br><strong>Figura 3:</strong> Subgrupo de produtos<br><br>&nbsp;</p>
+<p>No primeiro recebimento de compras desses produtos, ficará registrado o preço de custo.&nbsp;<strong>Exemplo:</strong><br><br><strong>Item 01:</strong> Caderno Azul R$ 10,00<br><strong>Item 02:</strong> Caderno Vermelho R$ 10,00<br><strong>Item 03:</strong> Caderno Verde R$ 15,00<br><br>Nessa compra,&nbsp;ficarão registrados os preços de custo dos produtos.<br><br>Numa segunda compra&nbsp;somente do caderno Azul, ao preço de R$20,00, o sistema irá aplicar a mesma <strong>porcentagem de alteração de preço para os demais produtos pertencentes ao subgrupo</strong> do produto recebido.&nbsp;Portanto os preços ficarão da seguinte forma a partir do novo recebimento:<br><br><strong>Item 01:</strong> Caderno Azul R$20,00<br><br>Então, o sistema&nbsp;irá checar a porcentagem em relação ao preço anterior e aplica a mesma porcentagem aos demais produtos do mesmo subgrupo<br><br><strong>Item 02:</strong> Caderno Vermelho R$20,00 (aumento de 100%, conforme o recebimento do Item 01 Caderno Azul)<br><strong>Item 03:</strong> Caderno Verde R$30,00 (aumento de 100%, conforme o recebimento do Item 01 Caderno Azul)<br><br>Deve-se tomar cuidado ao utilizar essa configuração, pois a alteração de um produto do subgrupo afeta todos os demais desse subgrupo automaticamente e sem aviso prévio, enquanto a configuração estiver ativada.<br><br>Deve-se notar também que&nbsp;o preço é atualizado considerando os impostos (IPI, PIS, COFINS, ICMS, ICMSST e Frete). Observe na tela do&nbsp;menu de&nbsp;<strong>Recebimento de compra</strong>,&nbsp;a coluna chamada&nbsp;<strong>'Vlr. de custo com Taxas':</strong><br>&nbsp;</p>
+<p>&nbsp;</p>
+<p><br><strong>Figura 4:&nbsp;</strong>Custo da compra considerando os impostos na nota fiscal recebida<br><br><br>É essa coluna que será considerada no cálculo para a atualização de preço dos itens do SubGrupo.<br><br><br><strong>Links de materiais de ajuda relacionados a este tópico:</strong><br>&nbsp;</p>
+<ul>
+  <li><a href="http://kb.confisa.com.br:3000/pt-br/Configura%C3%A7%C3%B5es/480199"><strong>Cadastro de acesso do usuário;</strong></a></li>
+  <li><a href="http://kb.confisa.com.br:3000/pt-br/Compras/474515"><strong>Recebimento de compras;</strong></a></li>
+  <li><a href="http://kb.confisa.com.br:3000/pt-br/Cadastros/474017"><strong>Divisões de produtos (Subgrupo);</strong></a></li>
+</ul>
