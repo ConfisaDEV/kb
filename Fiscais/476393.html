@@ -2,7 +2,7 @@
 title: Emissão de Nota Fiscal Manual - Confisa Sistemas
 description: 
 published: true
-date: 2025-10-02T17:32:28.194Z
+date: 2025-10-02T17:44:54.815Z
 tags: 
 editor: ckeditor
 dateCreated: 2025-04-15T17:32:57.186Z
@@ -20,13 +20,18 @@ dateCreated: 2025-04-15T17:32:57.186Z
 <figure class="image"><img src="/476393/ntf0020-reforma_itens.gif"></figure>
 <p><strong>Figura 5: </strong>Informando os itens.<br><br><br>Alterando impostos dos itens (<strong>situações tributárias, alíquotas, base de cálculo, etc.</strong>)&nbsp;manualmente, observando que agora há mais três abas referentes à <strong>reforma tributária: RT - CBS/IBS, RT - Trib. Regular e RT - Créditos</strong>, onde podemos informar o <strong>CST, CclassTrib e alíquotas de CBS/IBS estadual e municipal</strong>.</p>
 <figure class="image"><img src="/476393/img_6.gif" alt="NFeMan_Imp.gif"></figure>
-<p><strong>Figura 6:&nbsp;</strong>Indicando tributações dos itens (obrigatório).<br><br><br>Na aba&nbsp;<strong>'Transporte'</strong>, preencha informações sobre o transporte da mercadoria conforme o necessário:</p>
+<p><strong>Figura 6:&nbsp;</strong>Indicando tributações dos itens (obrigatório).<br><br><br>Ainda na aba <strong>‘RT - CBS/IBS’</strong>, é possível observar o campo <strong>‘Identificação da regra aplicada’</strong>. Nesse campo é mostrado como as alíquotas usadas para calcular os impostos da reforma tributária foram identificadas dentro do Confisa ERP.<br><br>No exemplo abaixo, podemos ver que a <strong>alíquota do CBS de 0,9%</strong> foi pega da configuração padrão, que fica no módulo <strong>‘CAD0231 - Configurações de regras da tributação fiscal’</strong>, aba <strong>CBS - Federal</strong>. Isso ocorre pois não há uma regra para esse item ou NCM com <strong>alíquota diferente</strong>.<br>&nbsp;</p>
+<figure class="image"><img src="/476393/ntf0020-campoidentregraaplic.png"></figure>
+<p><strong>Figura 7:</strong> Identificação de regra para CBS aplicada.</p>
+<p><br>O mesmo pode ser visto na subaba IBS - UF, onde é possível ver que a alíquota IBSUF de 0,10% também foi pega do padrão contido no módulo <strong>'Configurações de regras da tributação fiscal’,</strong> pois não há regra cadastrada para esse item ou NCM com uma alíquota de IBS - UF diferente.</p>
+<figure class="image"><img src="/476393/ntf0020-campoidentregraaplicibs.png"></figure>
+<p><strong>Figura 8:</strong> Identificação de regra para CBS aplicada.<br><br><br>Na aba&nbsp;<strong>'Transporte'</strong>, preencha informações sobre o transporte da mercadoria conforme o necessário:</p>
 <figure class="image"><img src="/476393/img_7.gif" alt="NFeMan_Transp.gif"></figure>
-<p><strong>Figura 7:&nbsp;</strong>Informando o tipo de transporte na nota fiscal.<br><br><br>Na aba&nbsp;<strong>'Inf. Adicionais'</strong>,&nbsp;pode-se indicar observações adicionais sobre o documento, também conforme o necessário. Na aba&nbsp;<strong>'Cobrança'</strong>, indique a condição de pagamento (se necessário):</p>
+<p><strong>Figura 9:&nbsp;</strong>Informando o tipo de transporte na nota fiscal.<br><br><br>Na aba&nbsp;<strong>'Inf. Adicionais'</strong>,&nbsp;pode-se indicar observações adicionais sobre o documento, também conforme o necessário. Na aba&nbsp;<strong>'Cobrança'</strong>, indique a condição de pagamento (se necessário):</p>
 <figure class="image"><img src="/476393/img_8.gif" alt="NFeMan_Pag.gif"></figure>
-<p><strong>Figura 8:&nbsp;</strong>Indicando condição de pagamento na nota fiscal.<br><br><br><strong>Observação:</strong> a opção&nbsp;<strong>'Sem pagamento'</strong> não envia as&nbsp;duplicatas (informações sobre as parcelas) para o XML.<br><br><br>Por fim pode-se realizar a emissão do documento clicando no botão&nbsp;<strong>'NFe - Transmitir'</strong>. Para imprimir o DANFE, clique sobre o botão <strong>'Ações'</strong> e no menu <strong>&lt;Impressão\Visualizar relatório&gt;</strong>:</p>
+<p><strong>Figura 10:&nbsp;</strong>Indicando condição de pagamento na nota fiscal.<br><br><br><strong>Observação:</strong> a opção&nbsp;<strong>'Sem pagamento'</strong> não envia as&nbsp;duplicatas (informações sobre as parcelas) para o XML.<br><br><br>Por fim pode-se realizar a emissão do documento clicando no botão&nbsp;<strong>'NFe - Transmitir'</strong>. Para imprimir o DANFE, clique sobre o botão <strong>'Ações'</strong> e no menu <strong>&lt;Impressão\Visualizar relatório&gt;</strong>:</p>
 <figure class="image"><img src="/476393/img_9.gif" alt="NFeMan_Trans.gif"></figure>
-<p><strong>Figura 9:</strong>&nbsp;Impressão da DANFE.</p>
+<p><strong>Figura 11:</strong>&nbsp;Impressão da DANFE.</p>
 <figure class="image"><img src=""></figure>
 <ul>
   <li><a href="http://kb.confisa.com.br:3000/pt-br/Cadastros/475527">Cadastro de naturezas de operação</a></li>
