@@ -1,0 +1,48 @@
+<!--
+title: Regras da Hierarquia de impostos da Reforma Tributária
+description: 
+published: true
+date: 2025-10-02T18:10:25.194Z
+tags: 
+editor: ckeditor
+dateCreated: 2025-10-02T18:10:25.194Z
+-->
+
+<p>Depois de saber o tipo de operação, o sistema procura as classificações nesta ordem:</p>
+<p>Hierarquia de busca das classificações:</p>
+<p>&nbsp;1 - Tipo de Operação &nbsp;+ ITEM (Regra específica)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ex.: existe uma regra cadastrada dizendo que o produto 'Arroz 5kg' no tipo de operação 'Venda Interna' tem redução/diferimento específico de 5%. &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -&gt; A classificação dessa regra será aplicada.</p>
+<p>&nbsp;2 - Tipo de Operação + NCM (Regra específica)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ex.: Caso a NCM do item informado na nota tenha uma regra cadastrada dizendo Todos os produtos do NCM 1006.30.21 (arroz semi-branqueado) tem redução/diferimento específico de 2.5%. &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -&gt; A classificação dessa regra será aplicada.</p>
+<p>&nbsp;3 - Tipo de Operação (Padrão)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Se não encontrar regras especificas nem para o Item e nem para a NCM. &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt; A classificação padrão do tipo de operaçao será aplicada.</p>
+<p>&nbsp;</p>
+<p>2- BUSCA DOS IMPOSTOS (%Aliquota, %Redução %Diferimento para os: CBS, IBSUF e IBSMUN)</p>
+<p>Depois que temos o Tipo de Operação e as Classificações (CST e CClasTrib), o sistema vai buscar as porcentagens de impostos.</p>
+<p>Importante: No cadastro de regras, cada imposto possui um campo Específico.</p>
+<p>Se este campo estiver marcado, o sistema vai usar o valor informado na regra.</p>
+<p>Se não estiver marcado, o sistema ignora a regra e continua procurando nos próximos níveis da hierarquia.</p>
+<p>&nbsp;</p>
+<p>Todos os impostos seguem a mesma hierarquia, porém a %Redução tem uma etapa a mais.</p>
+<p>&nbsp;</p>
+<p>Hierarquia de busca da %Alíquota e %Diferimento:</p>
+<p>&nbsp;1 - Tipo de Operação &nbsp;+ ITEM (Regra específica)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ex.: existe uma regra cadastrada dizendo que o produto 'Arroz 5kg' no tipo de operação 'Venda Interna' tem alíquota/diferimento de 2%. &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -&gt; Se o campo Específico estiver marcado, esse valor será aplicado.</p>
+<p>&nbsp;2 - Tipo de Operação + NCM (Regra específica)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ex.: existe uma regra dizendo que todos os produtos do NCM 1006.30.21 (arroz semi-branqueado) têm alíquota/diferimento de 1,8%.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -&gt; Se o campo Específico estiver marcado, esse valor será aplicado.</p>
+<p>&nbsp;3 - Tipo de Operação (Padrão Sefaz)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Se não encontrar regra em nenhum dos níveis anteriores, o sistema vai aplicar o valor padrão definido pela Sefaz.</p>
+<p>&nbsp;</p>
+<p>Hierarquia de busca da %Redução:</p>
+<p>&nbsp;1 - Tipo de Operação &nbsp;+ ITEM (Regra específica)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt; Se o campo Específico estiver marcado, esse valor será aplicado.</p>
+<p>&nbsp;2 - Tipo de Operação + NCM (Regra específica)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt; Se o campo Específico estiver marcado, esse valor será aplicado.</p>
+<p>&nbsp;3 - Tipo de Operação + Cadastro de Classificação Tributária do IBS/CBS (Regra específica)</p>
+<p>&nbsp; &nbsp; &nbsp; Se não houver regra marcada como específica, o sistema vai buscar o valor de redução diretamente na tabela oficial importada do Excel da Sefaz (CAD0229)</p>
+<p>&nbsp;4 - Tipo de Operação (Padrão Sefaz)</p>
