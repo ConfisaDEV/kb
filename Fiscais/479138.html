@@ -2,13 +2,71 @@
 title: Ajuste de FCI com %CI muito elevado - Confisa Sistemas
 description: 
 published: true
-date: 2025-06-26T13:14:09.443Z
+date: 2026-05-20T17:43:21.809Z
 tags: 
 editor: ckeditor
 dateCreated: 2025-04-15T17:35:43.531Z
 -->
 
-<p>Neste artigo mostraremos como<strong>&nbsp;ajustar a FCI quando aparece um&nbsp;%CI muito elevado.</strong><br><br><br>Em alguns casos, quando percentual da <strong>FCI</strong> <strong>(ficha conteúdo de importação)</strong> aparece com valor muito elevado no <strong>'REL0250- Relatório detalhado do cálculo da FCI',&nbsp;</strong>pode ser que uma matéria-prima utilizada para compor o produto tenha sido recebida na nota fiscal de compra com&nbsp;<strong>conversão de unidades incorreta.</strong>&nbsp;<br><br>Para corrigir isso, devemos primeiro acessar o módulo de <strong>'Cadastro de Histórico de FCI'</strong> no menu <strong>&lt;Fiscais\Complementares\FCI\Histórico de FCI&gt;</strong> ou através das teclas <strong>'CTRL + F'</strong> e digitando&nbsp;<strong>'NTF0038'</strong>.</p>
+<p><strong>Entendendo o que é FCI:</strong></p>
+<p>FCI significa <strong>Ficha de Conteúdo de Importação</strong>.<br>Ela é uma obrigação fiscal utilizada para informar ao governo o percentual de conteúdo importado existente em produtos industrializados no Brasil.</p>
+<p>A FCI foi criada para atender às regras do ICMS nas operações com produtos importados, principalmente após a definição da alíquota interestadual de 4% para mercadorias importadas.</p>
+<h3>Quando a FCI é necessária?</h3>
+<p>A FCI deve ser gerada quando a empresa:</p>
+<ul>
+  <li>Utiliza insumos importados na fabricação de produtos;</li>
+  <li>Industrializa mercadorias com conteúdo de importação;</li>
+  <li>Realiza vendas interestaduais desses produtos.</li>
+</ul>
+<h3>Como funciona?</h3>
+<p>A empresa precisa calcular o percentual de conteúdo importado presente no produto final. Esse cálculo considera:</p>
+<ul>
+  <li>Valor dos insumos importados;</li>
+  <li>Valor total do produto final industrializado.</li>
+</ul>
+<p>O resultado gera o chamado <strong>Conteúdo de Importação (CI)</strong>.</p>
+<p>A fórmula utilizada é:</p>
+<p>CI=Valor&nbsp;da&nbsp;Parcela&nbsp;ImportadaValor&nbsp;Total&nbsp;da&nbsp;Saiˊda&nbsp;Interestadual×100CI = \frac{Valor\ da\ Parcela\ Importada}{Valor\ Total\ da\ Sa\'ida\ Interestadual} \times 100CI=Valor&nbsp;Total&nbsp;da&nbsp;Saiˊda&nbsp;InterestadualValor&nbsp;da&nbsp;Parcela&nbsp;Importada​×100</p>
+<h3>Exemplo prático</h3>
+<ul>
+  <li>Valor dos componentes importados: R$ 400,00</li>
+  <li>Valor total do produto vendido: R$ 1.000,00</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+  <li>Conteúdo de Importação = 40%</li>
+</ul>
+<h3>O que acontece após gerar a FCI?</h3>
+<p>Após o envio da FCI para a SEFAZ:</p>
+<ol>
+  <li>É gerado um número de controle da FCI;</li>
+  <li>Esse número deve constar na NF-e nas vendas interestaduais do produto;</li>
+  <li>A informação ajuda a definir a tributação correta do ICMS.</li>
+</ol>
+<h3>Informações normalmente exigidas na FCI</h3>
+<ul>
+  <li>Produto fabricado;</li>
+  <li>Valor da parcela importada;</li>
+  <li>Valor total da operação interestadual;</li>
+  <li>Percentual do conteúdo de importação;</li>
+  <li>Número da FCI gerada anteriormente (quando houver).</li>
+</ul>
+<h3>Importante</h3>
+<ul>
+  <li>A FCI deve ser atualizada sempre que houver alteração no percentual de conteúdo importado;</li>
+  <li>Mesmo produtos fabricados no Brasil podem precisar de FCI se utilizarem componentes importados;</li>
+  <li>O não envio ou envio incorreto pode gerar rejeições fiscais e problemas tributários.</li>
+</ul>
+<p>No Confisa ERP, o controle da FCI normalmente envolve:</p>
+<ul>
+  <li>Cadastro correto dos itens importados;</li>
+  <li>Controle de custos e composição do produto;</li>
+  <li>Geração das informações fiscais para a NF-e.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Como corrigir FCI com percentual muito elevado no Confisa ERP</strong></p>
+<p>Como<strong>&nbsp;ajustar a FCI quando aparece um&nbsp;%CI muito elevado?</strong><br><br>Em alguns casos, quando percentual da <strong>FCI</strong> <strong>(ficha conteúdo de importação)</strong> aparece com valor muito elevado no <strong>'REL0250- Relatório detalhado do cálculo da FCI',&nbsp;</strong>pode ser que uma matéria-prima utilizada para compor o produto tenha sido recebida na nota fiscal de compra com&nbsp;<strong>conversão de unidades incorreta.</strong>&nbsp;<br><br>Para corrigir isso, devemos primeiro acessar o módulo de <strong>'Cadastro de Histórico de FCI'</strong> no menu <strong>&lt;Fiscais\Complementares\FCI\Histórico de FCI&gt;</strong> ou através das teclas <strong>'CTRL + F'</strong> e digitando&nbsp;<strong>'NTF0038'</strong>.</p>
 <figure class="image"><img src="/479138/img_1.gif" alt="menu_CadHistFCI.gif"></figure>
 <p><strong>Figura 1:</strong> Acessando o módulo de Cadastro de Histórico de FCI.<br><br><br>Quando se recebe um produto em caixa e vende-se por unidade, ou compra-se o produto em galão/balde em vende-se em litros.&nbsp;A conversão de unidades&nbsp;é usada diretamente no cálculo do conteúdo de importação de um produto, alterando o percentual no conteúdo da ficha de importação do produto para um percentual anormal.</p>
 <figure class="image"><img src="/479138/img_2.gif" alt="HistFCI_localizaFCI.gif"></figure>
@@ -23,4 +81,17 @@ dateCreated: 2025-04-15T17:35:43.531Z
 <figure class="image"><img src="/479138/img_6.gif" alt="HistFCI_relAcertado.gif"></figure>
 <p><strong>Figura 6: </strong>Relatório detalhado do cálculo <strong>FCI.</strong><br><br><br>Podemos conferir também&nbsp;no<strong>&nbsp;'Cadastro do histórico das FCI'</strong> se a porcentagem está correta,<strong>&nbsp;</strong>como demonstra abaixo:</p>
 <figure class="image"><img src="/479138/img_7.gif" alt="HistFCI_moduloAcertado.gif"></figure>
-<p><strong>Figura 7:</strong> Tela do cadastro de histórico das FCI.<br><br><br>Para saber mais sobre <strong>'Conversão de unidades'</strong> no&nbsp;<strong>ERP Confisa, </strong><a href="https://kb.confisa.com.br/pt-br/Cadastros/482490"><strong>clique aqui.</strong></a></p>
+<p><strong>Figura 7:</strong> Tela do cadastro de histórico das FCI.<br><br>&nbsp;</p>
+<p><strong>Resumindo tudo:</strong></p>
+<p>A FCI é utilizada para informar ao governo o percentual de conteúdo importado presente em produtos industrializados. No Confisa ERP, esse cálculo depende diretamente das informações cadastradas nas matérias-primas e nas notas fiscais de compra.</p>
+<p>Quando o percentual da FCI aparece muito elevado, normalmente o problema está relacionado à conversão de unidades incorreta de alguma matéria-prima importada. Nesses casos, é necessário:</p>
+<ol>
+  <li>Identificar o item no relatório <code>REL0250</code>;</li>
+  <li>Cancelar o recebimento da NF de compra;</li>
+  <li>Corrigir a conversão de unidades da matéria-prima;</li>
+  <li>Zerar os valores incorretos no histórico da FCI (<code>NTF0038</code>);</li>
+  <li>Refazer o recebimento da nota fiscal.</li>
+</ol>
+<p>Após esses ajustes, o sistema recalculará automaticamente o conteúdo de importação, deixando o percentual da FCI correto.</p>
+<p>&nbsp;</p>
+<p>Para saber mais sobre <strong>'Conversão de unidades'</strong> no&nbsp;<strong>ERP Confisa, </strong><a href="https://kb.confisa.com.br/pt-br/Cadastros/482490"><strong>clique aqui.</strong></a></p>
