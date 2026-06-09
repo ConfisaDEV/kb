@@ -2,7 +2,7 @@
 title: NFC-e em Contingência -  Como Resolver ?
 description: 
 published: true
-date: 2026-06-09T16:48:44.821Z
+date: 2026-06-09T16:50:24.488Z
 tags: 
 editor: ckeditor
 dateCreated: 2026-05-25T11:38:14.716Z
@@ -13,7 +13,7 @@ dateCreated: 2026-05-25T11:38:14.716Z
 <p><strong>Figura 1:</strong> Verificar uma NFC-e em contingência.<br><br><strong>De maneira alguma</strong> uma NFC-e autorizada em modo de contingência em <strong>modo offline</strong> pode ser considerada autorizada <strong>definitivamente</strong>, valendo isso também para NF-e. A empresa deve buscar, <strong>por todos os meios</strong>, sua autorização <strong>online</strong> pela Sefaz dentro do prazo citado, <strong>9 horas</strong>.<br><br>No sistema Confisa ERP, caso uma NFC-e esteja autorizada em modo de <strong>contingência offline</strong>, <strong>será exibida ao usuário uma mensagem</strong> <strong>dizendo quantas NFC-es e NF-es precisam de atenção</strong>. O sistema mostrará&nbsp;as mesmas no módulo <strong>NTF0010 - Notas Fiscais Pendentes </strong>e buscará transmiti-las para a Sefaz assim que a conexão for restabelecida.<br><br>Caso ele não tenha sucesso por algum motivo e a autorização da nota seja rejeitada pela Sefaz, o usuário deverá verificar na mensagem que aparecerá e identificar o motivo da rejeição, buscando sua correção.&nbsp;<br><br>É importante salientar que <strong>se durante a transmissão</strong> automática da NFC-e houver <strong>rejeição</strong>, o sistema <strong>não tentará</strong> novamente autorizá-la. O usuário deverá verificar o <strong>motivo da rejeição</strong>, como citado acima, e transmiti-la <strong>manualmente</strong>.</p>
 <figure class="image"><img src="/728816/nfc-e_fig2.gif"></figure>
 <p><strong>Figura 2:</strong> Aviso de NFC-es em contingência.<br><br>O principal motivo para que o sistema não consiga autorizar uma NFC-e é o uso de <strong>NCMs </strong>que<strong> não são mais aceitas</strong> como válidas pela Sefaz. Nesses casos, ao tentar autorizar a NFC-e, será exibida uma mensagem de que a NCM está como inexistente, <strong>devendo a empresa consultar o contador o mais rápido possível</strong> e verificar qual NCM deverá ser utilizada no lugar da que está informada no produto na nota.</p>
-<figure class="image"><img src="/728816/nfc-e_fig3.gif"></figure>
+<p>&nbsp;</p>
 <p><strong>Figura 3:</strong> Autorizar manualmente uma NFC-e em contingência.<br><br>O procedimento de troca de NCM deve ser feito <strong>para cada uma que receber</strong> a mensagem de que é <strong>inexistente </strong>na Sefaz. O recomendado, buscando acelerar o processo, é verificar com o contador todas as NCMs da NFC-e e<strong> realizar o ajuste na nota fiscal de uma só vez</strong>.<br><br>É <strong>fortemente recomendado</strong>, também, trocar as NCMs no <strong>cadastro dos produtos</strong>, substituindo as que emitiram mensagem de inexistência pelas novas definitivas, dessa forma serão evitadas novas rejeições nas NFC-es (e também NF-es) quando esses produtos forem vendidos.</p>
 <figure class="image"><img src="/728816/nfc-e_fig4.gif"></figure>
 <p><strong>Figura 4:</strong> Troca de NCM no Cadastro do Produto.<br><br><br>Em casos onde há NFC-es ou NF-es em contingência há mais de 9 horas, o sistema emitirá um aviso e salvará a nota. Ela será retransmitida e autorizada se não houver rejeições.</p>
