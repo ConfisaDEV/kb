@@ -2,7 +2,7 @@
 title: Reforma Tributária no Confisa (IBS e CBS)
 description: 
 published: true
-date: 2026-10-29T17:12:42.287Z
+date: 2026-10-29T17:32:12.881Z
 tags: 
 editor: ckeditor
 dateCreated: 2026-10-29T16:20:36.985Z
@@ -1157,7 +1157,7 @@ Com tributos = Preço + CBS + IBS + IS
 <h2><strong>7. Frente de caixa (PDV)</strong></h2>
 <p>Vale para a tela <strong>Frente de caixa (FAT0030)</strong>.</p>
 <h3><br><strong>7.1 Natureza e tipo de operação no PDV</strong></h3>
-<p>Na identificação do cliente há dois campos:</p>
+<p><br>Na identificação do cliente há dois campos:</p>
 <figure class="table">
   <table>
     <thead>
@@ -1181,7 +1181,7 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p>Com ENTER, a ordem é: <strong>Tabela de preço → Natureza → Tipo da Operação → Representante</strong>. Ao digitar um código que não existe, abre a pesquisa.</p>
+<p><strong>Figura 28:</strong> Configurações para venda no PDV.<br><br><br>Com ENTER, a ordem é: <strong>Tabela de preço → Natureza → Tipo da Operação → Representante</strong>. Ao digitar um código que não existe, abre a pesquisa.</p>
 <blockquote>
   <p>⚠️ <strong>Sem natureza ou sem tipo de operação, a venda do PDV sai sem IBS/CBS.</strong> Confira se a natureza da frente de caixa da filial tem o "Cod. Tipo Operação" preenchido.</p>
 </blockquote>
@@ -1195,7 +1195,7 @@ Com tributos = Preço + CBS + IBS + IS
 <h3><br><strong>7.3 A nota do PDV</strong></h3>
 <p>A NFC-e (ou a NF-e) gerada pelo PDV recebe o <strong>Vlr. Unit. com Tributos</strong> de cada item. O <strong>total da nota é igual ao total pago</strong>.</p>
 <hr>
-<h2><br><strong>8. App do representante</strong></h2>
+<h2><strong>8. App do representante</strong></h2>
 <blockquote>
   <p>👤 <strong>Esta parte depende de uma decisão</strong> sobre como o app vai tratar o IBS/CBS por fora. O texto abaixo será completado quando a decisão for tomada.</p>
 </blockquote>
@@ -1205,11 +1205,11 @@ Com tributos = Preço + CBS + IBS + IS
   <li>O pedido do app chega no ERP <strong>sem natureza</strong>: ele recebe a natureza padrão do cliente ou do estado, como um pedido digitado (parte 4, item 6). <strong>Sem natureza padrão, o pedido do app fica sem IBS/CBS.</strong></li>
 </ul>
 <hr>
-<h2><br><strong>9. Nota fiscal</strong></h2>
-<p>Vale para a tela <strong>Notas fiscais emitidas (NTF0020)</strong>.</p>
+<h2><strong>9. Nota fiscal</strong></h2>
+<p>Vale para a tela <strong>Notas fiscais emitidas (NTF0020)</strong>.<br>&nbsp;</p>
 <h3><strong>9.1 Nota gerada do pedido ou do PDV</strong></h3>
 <p>O Vlr. Unit. vem <strong>pronto</strong> do pedido (o Vlr. Unit. com Tributos). Não precisa fazer nada (parte 6.6).</p>
-<h3><strong>9.2 Nota digitada</strong></h3>
+<h3><br><strong>9.2 Nota digitada</strong></h3>
 <ol>
   <li><strong>Informe a data de emissão, o cliente e a natureza antes de lançar os itens.</strong> O Vlr. Unit. com o IBS/CBS por fora é calculado <strong>quando o preço é buscado</strong> (ao lançar a quantidade do item ou ao trocar a tabela de preço), com a data, o ICMS e a alíquota daquele momento.</li>
   <li>Lance os itens como hoje. O <strong>Vlr. Unit.</strong> vem do cadastro ou da tabela <strong>já com o IBS/CBS por fora</strong>.<ul>
@@ -1245,19 +1245,17 @@ Com tributos = Preço + CBS + IBS + IS
 </ol>
 <p><strong>Devolução de compra:</strong> ao importar a nota do fornecedor, o sistema guarda o número de cada item do XML. Em nota de compra importada antes disso, o número do item pode estar vazio: informe-o na grade de itens antes de transmitir.</p>
 <hr>
-<h2><br><strong>10. Como conferir a conta</strong></h2>
+<h2><strong>10. Como conferir a conta</strong></h2>
 <p><strong>Conferência 1: o IBS/CBS foi somado por fora</strong> (item sem frete e sem desconto):</p>
 <pre><code class="language-plaintext">Total do item − IBS/CBS = Preço de venda × Quantidade
 </code></pre>
-<p><strong>Exemplo:</strong> 639,90 − 5,89 = <strong>634,01</strong>, e 126,80 × 5 = <strong>634,00</strong> ✔ (1 centavo de arredondamento)</p>
+<p><strong>Figura 29: </strong>Cálculo total do item com IBS/CBS<br><br><br><strong>Exemplo:</strong> 639,90 − 5,89 = <strong>634,01</strong>, e 126,80 × 5 = <strong>634,00</strong> ✔ (1 centavo de arredondamento)</p>
 <p><strong>Conferência 2: a divisão do total:</strong></p>
 <pre><code class="language-plaintext">Sem tributos + ICMS + IBS/CBS = Total do item
 </code></pre>
-<p><strong>Exemplo:</strong> 589,21 + 44,79 + 5,89 = <strong>639,89</strong>, e o total do item é <strong>639,90</strong> ✔ (1 centavo de arredondamento)</p>
-<p><strong>Conferência 3:</strong> o <strong>Vlr. Unit.</strong> do item tem que ser <strong>igual ao da tabela de preço</strong> (ou ao digitado). O sistema não muda o Vlr. Unit.: ele calcula o Vlr. Unit. com Tributos ao lado.</p>
-<p>Diferença de <strong>até 1 centavo</strong> é arredondamento. Se a diferença for maior, anote o número do pedido ou da nota e fale com o suporte.</p>
+<p><strong>Figura 30:</strong> Cálculo do total do item destacando cada componente.<br><br><br><strong>Exemplo:</strong> 589,21 + 44,79 + 5,89 = <strong>639,89</strong>, e o total do item é <strong>639,90</strong> ✔ (1 centavo de arredondamento).<br><br><strong>Conferência 3:</strong> o <strong>Vlr. Unit.</strong> do item tem que ser <strong>igual ao da tabela de preço</strong> (ou ao digitado). O sistema não muda o Vlr. Unit.: ele calcula o Vlr. Unit. com Tributos ao lado.<br><br>Diferença de <strong>até 1 centavo</strong> é arredondamento. Se a diferença for maior, anote o número do pedido ou da nota e fale com o suporte.</p>
 <hr>
-<h2><br><strong>11. Dúvidas comuns</strong></h2>
+<h2><strong>11. Dúvidas comuns</strong></h2>
 <h3><br><strong>11.1 Como fica o desconto?</strong></h3>
 <p>O desconto é dado sobre o preço de venda e passa para o valor com tributos <strong>na mesma proporção</strong>. <strong>O "Total sem tributos" é calculado sobre o preço antes do desconto</strong>, igual ao que vai na nota. Ele só muda quando o <strong>próprio Vlr. Unit.</strong> muda.</p>
 <p><strong>Exemplo:</strong> 5 unidades do 07919CJ (126,80), cliente 60312, com 10% de desconto.</p>
@@ -1314,8 +1312,8 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p><strong>Com desconto, o IBS/CBS é 5,30 nos três casos.</strong> Muda só a forma de mostrar, e pode haver 1 centavo de diferença no total. O desconto geral do rodapé sempre aparece para o cliente.</p>
-<p>Na nota, o desconto do item aparece como <strong>63,99</strong> (os 10% sobre 639,90).</p>
+<p><strong>Figura 31:</strong> Configurações de desconto e exemplos de cálculos em cada situação.<br><br><br><strong>Com desconto, o IBS/CBS é R$ 5,30 nos três casos.</strong> Muda só a forma de mostrar, e pode haver 1 centavo de diferença no total. O desconto geral do rodapé sempre aparece para o cliente.</p>
+<p>Na nota, o desconto do item aparece como <strong>R$ 63,99</strong> (os 10% sobre R$ 639,90).</p>
 <h3><br><strong>11.2 O IBS/CBS ficou vazio no pedido</strong></h3>
 <p>Confira, nesta ordem:</p>
 <ol>
@@ -1365,7 +1363,7 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<h3><br><strong>11.4 Troquei o cliente de estado e o total mudou um pouco</strong></h3>
+<p><strong>Figura 32:</strong> Formas de cálculo de impostos em diferentes situações.<br><br><br><strong>11.4 Troquei o cliente de estado e o total mudou um pouco</strong></p>
 <p><br><strong>Está certo.</strong> O Vlr. Unit. não muda, mas o IBS/CBS é calculado depois de tirar o ICMS. Com outro ICMS, o IBS/CBS muda, e o total muda junto: <strong>639,90</strong> com ICMS 7% e <strong>639,55</strong> com ICMS 12% (parte 6.2). Para a margem acompanhar o ICMS, use a tabela da alíquota de ICMS da venda (parte 5.3).</p>
 <h3><br><strong>11.5 A nota de 2027 saiu com o PIS/COFINS zerado, mas com o CST antigo</strong></h3>
 <p><strong>O cálculo está certo.</strong> O sistema zera os valores, mas o CST vem do cadastro (CFOP, natureza ou classificação fiscal). 👤 Com o contador, ajuste o CST no <strong>Cadastro de Natureza de Operação (NTF0002)</strong> e marque "Forçar o cálculo de PIS/COFINS na nota" (parte 4.1).</p>
@@ -1386,7 +1384,7 @@ Com tributos = Preço + CBS + IBS + IS
   <li>O cálculo automático de impostos da nota está <strong>ligado</strong>?</li>
   <li>É uma <strong>devolução</strong> de venda de antes da <code>DTINICIOIBSCBSRT</code>? Então o PIS/COFINS da venda se repete, e está certo (parte 11.6).</li>
 </ol>
-<h3><br><strong>11.8 Venda para consumidor final de outro estado</strong></h3>
+<h3><br>11.8 Venda para consumidor final de outro estado</h3>
 <p>Vale para cliente <strong>sem inscrição estadual</strong> de outro estado. 👤 Confirme com o contador como a sua empresa trata essas vendas.</p>
 <ul>
   <li><strong>ICMS da nota:</strong> alíquota interestadual, igual à venda para empresa daquele estado.</li>
@@ -1431,7 +1429,7 @@ Com tributos = Preço + CBS + IBS + IS
 <h3><br><strong>11.19 Empresa do Simples Nacional: muda alguma coisa?</strong></h3>
 <p><strong>Por enquanto, não.</strong> Com a configuração da filial <code>DTINICIORT</code> vazia, o pedido, o PDV e a nota funcionam como hoje: o Vlr. Unit. com Tributos fica igual ao Vlr. Unit., e o total não soma IBS/CBS.</p>
 <hr>
-<h2><br><strong>12. Como começar: lista passo a passo</strong></h2>
+<h2><strong>12. Como começar: lista passo a passo</strong></h2>
 <p>Siga nesta ordem. Onde aparecer o 👤, faça com o contador.</p>
 <ol>
   <li>Na tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>, aba <strong>Configurações adicionais</strong>, confira as configurações da filial da parte 3.</li>
@@ -1547,4 +1545,4 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p><br><br><br><br><br><br><br><br><br>&nbsp;</p>
+<p><strong>Figura 33:</strong> Revisão por assuntos.<br><br><br><br><br><br><br><br><br><br>&nbsp;</p>
