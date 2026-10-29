@@ -2,7 +2,7 @@
 title: Reforma Tributária no Confisa (IBS e CBS)
 description: 
 published: true
-date: 2026-10-29T16:59:21.908Z
+date: 2026-10-29T17:12:42.287Z
 tags: 
 editor: ckeditor
 dateCreated: 2026-10-29T16:20:36.985Z
@@ -702,10 +702,10 @@ dateCreated: 2026-10-29T16:20:36.985Z
   </table>
 </figure>
 <p><strong>Figura 15:</strong> Regras para cálculo de ICMS na reforma tributária.<br><br><br><strong>Como o sistema chega no imposto:</strong></p>
-<pre><code class="language-plaintext">Natureza → Tipo de operação → CST e classificação → Alíquota (pela data) → Imposto
-</code></pre>
+<pre><code class="language-plaintext">Natureza → Tipo de operação → CST e classificação → Alíquota (pela data) → Imposto</code></pre>
+<p><strong>Figura 16:</strong> Sequência de passos para cálculo de impostos.</p>
 <hr>
-<h2><br><br><strong>5. Formação do preço de venda e tabela de preço</strong></h2>
+<h2><br><strong>5. Formação do preço de venda e tabela de preço</strong></h2>
 <blockquote>
   <p>ℹ️ Se a sua tela <strong>Formação do preço de venda (ADM0011)</strong> ainda não mostra os campos de IBS, CBS e IS, fale com o suporte.</p>
 </blockquote>
@@ -713,8 +713,8 @@ dateCreated: 2026-10-29T16:20:36.985Z
 <p>Na <strong>Formação do preço de venda (ADM0011)</strong> você monta o preço de venda e a margem, como antes. Agora a tela também mostra, para cada produto, quanto dá de <strong>IBS</strong>, <strong>CBS</strong> e <strong>IS</strong> e o <strong>valor com tributos</strong>.</p>
 <p>Com o preço definido, você pode:</p>
 <ul>
-  <li><strong>alterar o preço do próprio cadastro do produto</strong> (botão <strong>"Atualizar preços no cadastro"</strong>); ou</li>
-  <li><strong>criar uma nova tabela de preço</strong> com esses preços (botão <strong>"Gerar nova tabela de preço"</strong>, parte 5.5).</li>
+  <li><strong>Alterar o preço do próprio cadastro do produto</strong> (botão <strong>"Atualizar preços no cadastro"</strong>); ou</li>
+  <li><strong>Criar uma nova tabela de preço</strong> com esses preços (botão <strong>"Gerar nova tabela de preço"</strong>, parte 5.5).</li>
 </ul>
 <p>O <strong>IS</strong> (Imposto Seletivo) só existe para alguns produtos definidos em lei. <strong>Por enquanto a coluna do IS fica zerada</strong>, porque as alíquotas do IS ainda não estão no sistema.</p>
 <h3><br><strong>5.2 Como a tela calcula o IBS, a CBS e o IS</strong></h3>
@@ -732,7 +732,7 @@ IBS          = Base × % IBS
 IS           = Base × % IS
 Com tributos = Preço + CBS + IBS + IS
 </code></pre>
-<p><strong>Exemplo</strong> (produto 07919CJ, preço sugerido 126,80, % ICMS Venda 7%, CBS 0,90%, IBS 0,10%):</p>
+<p><strong>Figura 17:</strong> Fórmula para cálculos de impostos na reforma tributária.<br><br><br><strong>Exemplo</strong> (produto 07919CJ, preço sugerido 126,80, % ICMS Venda 7%, CBS 0,90%, IBS 0,10%):</p>
 <figure class="table">
   <table>
     <thead>
@@ -759,25 +759,21 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p>O pedido para o cliente da Bahia (ICMS 7%) dá o mesmo <strong>127,98</strong> (parte 6.1).</p>
+<p><strong>Figura 18:</strong> Exemplo de cálculo da reforma tributária.<br><br><br>O pedido para o cliente da Bahia (ICMS 7%) dá o mesmo <strong>127,98</strong> (parte 6.1).</p>
 <p><strong>Lembretes:</strong></p>
 <ul>
   <li>Mudou o <strong>"% ICMS Venda"</strong>? Clique em <strong>"Calcular preços"</strong> para refazer a conta.</li>
   <li>Mudou as alíquotas no CAD0231? Feche e abra a tela da Formação do preço de venda.</li>
 </ul>
 <h3><br><strong>5.3 Tabelas por alíquota de ICMS (não por estado)</strong></h3>
-<p>O ICMS fica <strong>dentro</strong> do preço de venda. Para a margem ser a mesma em todas as vendas, crie <strong>uma tabela de preço por alíquota de ICMS</strong>, e não uma por estado. Assim ficam poucas tabelas: por exemplo, a da alíquota interna, a de 12%, a de 7% e a de 4%. 👤 <strong>O contador confirma quais alíquotas valem para os seus produtos e as suas vendas.</strong></p>
-<p><strong>Na venda, o imposto é definido pela natureza informada no pedido, por meio do tipo de operação</strong> (parte 6). Use a tabela de preço da alíquota de ICMS daquela venda.</p>
-<p><strong>Consumidor final de outro estado</strong> (sem inscrição estadual) tem regra própria de ICMS (parte 11.8). Se a empresa vende para esse público, faça uma tabela para ele.</p>
+<p>O ICMS fica <strong>dentro</strong> do preço de venda. Para a margem ser a mesma em todas as vendas, crie <strong>uma tabela de preço por alíquota de ICMS</strong>, e não uma por estado. Assim ficam poucas tabelas: por exemplo, a da alíquota interna, a de 12%, a de 7% e a de 4%. 👤 <strong>O contador confirma quais alíquotas valem para os seus produtos e as suas vendas.</strong><br><br><strong>Na venda, o imposto é definido pela natureza informada no pedido, por meio do tipo de operação</strong> (parte 6). Use a tabela de preço da alíquota de ICMS daquela venda.<br><br><strong>Consumidor final de outro estado</strong> (sem inscrição estadual) tem regra própria de ICMS (parte 11.8). Se a empresa vende para esse público, faça uma tabela para ele.</p>
 <h3><br><strong>5.4 Quando refazer as tabelas</strong></h3>
-<p>O preço de venda fica parado na tabela. O IBS/CBS é calculado na hora da venda, então <strong>uma alíquota nova de IBS/CBS não muda a margem</strong>: muda só o total que o cliente paga.</p>
-<p>Refaça as tabelas na <strong>Formação do preço de venda (ADM0011)</strong> quando mudar o que está <strong>dentro</strong> do preço:</p>
+<p>O preço de venda fica parado na tabela. O IBS/CBS é calculado na hora da venda, então <strong>uma alíquota nova de IBS/CBS não muda a margem</strong>: muda só o total que o cliente paga.<br><br>Refaça as tabelas na <strong>Formação do preço de venda (ADM0011)</strong> quando mudar o que está <strong>dentro</strong> do preço:</p>
 <ul>
-  <li>o <strong>ICMS</strong> (de <strong>2029 a 2033</strong>, o ICMS cai <strong>todo ano</strong>);</li>
-  <li>os seus custos ou a sua margem.</li>
+  <li>O <strong>ICMS</strong> (de <strong>2029 a 2033</strong>, o ICMS cai <strong>todo ano</strong>);</li>
+  <li>Os seus custos ou a sua margem.</li>
 </ul>
-<p>Quando sair uma alíquota nova de IBS/CBS (a <strong>CBS de 2027</strong> sai até <strong>15/12/2026</strong>), atualize a tela <strong>Configurações de regras da tributação fiscal (CAD0231)</strong>, inclusive a aba <strong>Padrão</strong>, usada pela Formação do preço de venda e pelo Cadastro de Tabelas de Preços.</p>
-<p>Nas tabelas que já existem, os valores de IBS, CBS e IS dos itens só mudam quando você informa os novos percentuais no <strong>Cadastro de Tabelas de Preços (CAD0028)</strong> e salva (parte 5.6).</p>
+<p>Quando sair uma alíquota nova de IBS/CBS (a <strong>CBS de 2027</strong> sai até <strong>15/12/2026</strong>), atualize a tela <strong>Configurações de regras da tributação fiscal (CAD0231)</strong>, inclusive a aba <strong>Padrão</strong>, usada pela <strong>Formação do preço de venda </strong>e pelo <strong>Cadastro de Tabelas de Preços</strong>.<br><br>Nas tabelas que já existem, os <strong>valores de IBS, CBS e IS dos itens</strong> só mudam quando você informa os novos percentuais no <strong>Cadastro de Tabelas de Preços (CAD0028)</strong> e salva (parte 5.6).</p>
 <h3><br><strong>5.5 Gerar uma nova tabela de preço pela Formação do preço de venda</strong></h3>
 <ol>
   <li>Na <strong>Formação do preço de venda (ADM0011)</strong>, adicione os produtos e clique em <strong>"Calcular preços"</strong>.</li>
@@ -811,11 +807,11 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
+<p><strong>Figura 18:</strong> Campos existentes na tabela de preço.</p>
 <blockquote>
   <p>⚠️ <strong>Item com preço sugerido 0 vai com preço 0.</strong> Confira os itens marcados antes de gerar.</p>
 </blockquote>
-<p><strong>Preço diferente por cor e tamanho.</strong> Se a filial usa preço por cor e/ou tamanho (configurações da filial <code>PRECODIFCOR</code> e <code>PRECODIFTAM</code>) e o produto tem preços próprios no <strong>Cadastro de produtos (CAD0030)</strong>, aba <strong>Preços</strong> → <strong>Diferenciais de preços</strong>, a tabela recebe também <strong>uma linha para cada cor/tamanho</strong>. O preço de cada linha é reajustado <strong>na mesma proporção</strong> do preço sugerido, e os tributos são calculados sobre o preço dela.</p>
-<p><strong>Exemplo:</strong> produto <strong>07919CJ</strong>, preço de cadastro <strong>126,80</strong>, preço sugerido <strong>130,00</strong> (+2,52%), % ICMS Venda 7%. Nos diferenciais, os tamanhos 4 a 10 custam <strong>112,80</strong> e os tamanhos 12 a 18 custam <strong>126,80</strong>.</p>
+<p><strong>Preço diferente por cor e tamanho.</strong> Se a filial usa preço por cor e/ou tamanho (configurações da filial <code>PRECODIFCOR</code> e <code>PRECODIFTAM</code>) e o produto tem preços próprios no <strong>Cadastro de produtos (CAD0030)</strong>, aba <strong>Preços</strong> → <strong>Diferenciais de preços</strong>, a tabela recebe também <strong>uma linha para cada cor/tamanho</strong>. O preço de cada linha é reajustado <strong>na mesma proporção</strong> do preço sugerido, e os tributos são calculados sobre o preço dela.<br><br><strong>Exemplo:</strong> produto <strong>07919CJ</strong>, preço de cadastro <strong>126,80</strong>, preço sugerido <strong>130,00</strong> (+2,52%), % ICMS Venda 7%. Nos diferenciais, os tamanhos 4 a 10 custam <strong>112,80</strong> e os tamanhos 12 a 18 custam <strong>126,80</strong>.<br>&nbsp;</p>
 <figure class="table">
   <table>
     <thead>
@@ -852,10 +848,9 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p>Os tamanhos que eram mais baratos no cadastro continuam mais baratos na tabela. Se quiser <strong>o mesmo preço para todos os tamanhos</strong>, ajuste os diferenciais do produto antes de gerar a tabela, ou acerte os itens depois no Cadastro de Tabelas de Preços.</p>
+<p><strong>Figura 19:</strong> Cálculo de valores diferenciados por tamanho e cor.<br><br>Os tamanhos que eram mais baratos no cadastro continuam mais baratos na tabela. Se quiser <strong>o mesmo preço para todos os tamanhos</strong>, ajuste os diferenciais do produto antes de gerar a tabela, ou acerte os itens depois no Cadastro de Tabelas de Preços.</p>
 <h3><br><strong>5.6 Tabela de preço (CAD0028)</strong></h3>
-<p>No <strong>Cadastro de Tabelas de Preços (CAD0028)</strong>, a grade de produtos tem as colunas <strong>Vlr. IBS</strong>, <strong>Vlr. CBS</strong>, <strong>Vlr. IS</strong> e <strong>Vlr. com Tributos</strong>. Elas <strong>não são digitadas</strong>: o sistema calcula sozinho sempre que o preço do item muda (ao digitar o preço, incluir produtos, copiar de outra tabela ou importar de arquivo). A conta é a mesma da parte 5.2.</p>
-<p><strong>Os percentuais da tabela</strong> (% CBS, % IBS e % IS) ficam no cabeçalho:</p>
+<p>No <strong>Cadastro de Tabelas de Preços (CAD0028)</strong>, a grade de produtos tem as colunas <strong>Vlr. IBS</strong>, <strong>Vlr. CBS</strong>, <strong>Vlr. IS</strong> e <strong>Vlr. com Tributos</strong>. Elas <strong>não são digitadas</strong>: o sistema calcula sozinho sempre que o preço do item muda (ao digitar o preço, incluir produtos, copiar de outra tabela ou importar de arquivo). A conta é a mesma da parte 5.2.<br><br><strong>Os percentuais da tabela</strong> (% CBS, % IBS e % IS) ficam no cabeçalho:</p>
 <ul>
   <li><strong>Tabela nova criada no CAD0028:</strong> vêm as alíquotas padrão da filial (CAD0231, aba Padrão). O % IS vem 0.</li>
   <li><strong>Tabela gerada pela Formação do preço de venda:</strong> vêm os percentuais usados lá (parte 5.5).</li>
@@ -884,34 +879,29 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p><strong>Ao salvar a tabela</strong> com algum percentual, o ICMS ou o destino alterados, <strong>todos os itens são recalculados</strong>.</p>
+<p><strong>Figura 20: </strong>Habilitação de Informações conforme configuração.<br><br><br><strong>Ao salvar a tabela</strong> com algum percentual, o ICMS ou o destino alterados, <strong>todos os itens são recalculados</strong>.</p>
 <p><strong>O cálculo do fator não mudou:</strong></p>
 <pre><code class="language-plaintext">Fator = 1 ÷ (1 − (Comissão + ICMS + IPI + PIS + COFINS + Lucro) ÷ 100)
 </code></pre>
-<p><strong>A CBS, o IBS e o IS não entram no fator</strong>, porque ficam por fora do preço. Eles servem só para calcular os tributos dos itens.</p>
-<p><strong>Exemplo:</strong> Comissão 5, ICMS 18, Lucro 20 (o resto 0): fator = 1 ÷ 0,57 = <strong>1,7544</strong>. Mudar o % CBS não muda o fator.</p>
-<p>Se a soma dos percentuais do fator chegar a 100% ou mais, o sistema avisa e não salva.</p>
-<p><strong>Outros casos:</strong></p>
+<p><strong>Figura 21:</strong> Fórmula para cálculo de fator de preço.<br><br><br><strong>A CBS, o IBS e o IS não entram no fator</strong> porque ficam por fora do preço. Eles servem só para calcular os tributos dos itens.<br><br><strong>Exemplo:</strong> Comissão 5, ICMS 18, Lucro 20 (o resto 0): fator = 1 ÷ 0,57 = <strong>1,7544</strong>. Mudar o % CBS não muda o fator.<br><br>Se a soma dos percentuais do fator chegar a 100% ou mais, o sistema avisa e não salva.<br><br><strong>Outros casos:</strong></p>
 <ul>
   <li><strong>Tabela de compra</strong> (Destino Compra): as colunas de tributos ficam vazias.</li>
   <li><strong>Tabela antiga</strong> (de antes desta versão): o item é calculado com as alíquotas padrão quando o preço dele for alterado. Para calcular todos os itens de uma vez, informe os percentuais no cabeçalho e salve (com a configuração da filial <code>CALCULARFATORTABPRECO</code> = Sim).</li>
 </ul>
 <h3><br><strong>5.7 O "Vlr. com Tributos" da tabela é uma estimativa</strong></h3>
-<p>O <strong>"Preço"</strong> da tabela é o que vai para o pedido. O pedido soma o IBS/CBS por fora e chega num valor <strong>muito próximo</strong> do "Vlr. com Tributos" da tabela.</p>
-<p>A diferença, quando existe, é de centavos e tem três motivos:</p>
+<p>O <strong>"Preço"</strong> da tabela é o que vai para o pedido. O pedido soma o IBS/CBS por fora e chega num valor <strong>muito próximo</strong> do "Vlr. com Tributos" da tabela.<br><br>A diferença, quando existe, é de centavos e tem três motivos:</p>
 <ul>
   <li>a tabela usa o <strong>% ICMS Venda</strong> da filial, e o pedido usa o ICMS <strong>do estado do cliente</strong> (parte 4.2);</li>
   <li>a tabela usa as <strong>alíquotas padrão</strong>, e o pedido usa a alíquota <strong>do tipo de operação na data da entrega</strong>;</li>
   <li>a conta do pedido é a mesma da nota, que arredonda em outro ponto.</li>
 </ul>
-<p><strong>Exemplo:</strong> tamanho 4, preço <strong>115,65</strong>. A tabela mostra <strong>116,73</strong>, e o pedido para o cliente da Bahia (ICMS 7%) mostra <strong>116,72</strong>.</p>
-<p><strong>O que vale é o valor do pedido</strong>, que é o mesmo da nota.</p>
+<p><strong>Exemplo:</strong> tamanho 4, preço <strong>115,65</strong>. A tabela mostra <strong>116,73</strong>, e o pedido para o cliente da Bahia (ICMS 7%) mostra <strong>116,72</strong>.<br><br><strong>O que vale é o valor do pedido</strong>, que é o mesmo da nota.</p>
 <blockquote>
   <p>⚠️ <strong>Não grave o "Vlr. com Tributos" no "Preço".</strong> O pedido somaria o IBS/CBS outra vez.</p>
 </blockquote>
 <hr>
-<h2><br><strong>6. Pedido e orçamento</strong></h2>
-<p>Vale para o <strong>Pedido de Venda (FAT0001)</strong>, o <strong>Orçamento de venda (FAT0007)</strong>, a <strong>Consignação de venda (FAT0008)</strong> e a <strong>Bonificação (FAT0059)</strong>.</p>
+<h2><strong>6. Pedido e orçamento</strong></h2>
+<p>Vale para o <strong>Pedido de Venda (FAT0001)</strong>, o <strong>Orçamento de venda (FAT0007)</strong>, a <strong>Consignação de venda (FAT0008)</strong> e a <strong>Bonificação (FAT0059)</strong>.<br>&nbsp;</p>
 <blockquote>
   <p>⚠️ <strong>Dois campos precisam estar preenchidos na venda: a natureza de operação e o tipo de operação.</strong> São eles que definem o imposto. Sem eles o pedido <strong>não calcula</strong> o IBS/CBS: os campos ficam vazios, o total sai sem IBS/CBS e, ao salvar, aparece um aviso (o pedido salva mesmo assim).</p>
   <figure class="table">
@@ -941,7 +931,7 @@ Com tributos = Preço + CBS + IBS + IS
     </table>
   </figure>
 </blockquote>
-<h3><br><strong>6.1 Lançando</strong></h3>
+<p><strong>Figura 22:</strong> Configurações de informações fiscais nos módulos de vendas.<br><br><br><strong>6.1 Lançando</strong></p>
 <ol>
   <li><strong>Data:</strong> a data que vale para o imposto é a <strong>data de entrega</strong>. Sem data de entrega, vale a <strong>data do pedido</strong>.</li>
   <li><strong>Cliente:</strong> define o estado (para o ICMS e o IBS).<ul>
@@ -1002,8 +992,8 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p>Na aba <strong>Dados fiscais</strong>, o pedido de 5 unidades mostra <strong>Total do IBS/CBS 5,89</strong> (CBS 5,30 + IBS 0,59) e <strong>Total Sem Tributos 589,21</strong>.</p>
-<p><strong>Serviço</strong> (serviço 000006, Vlr. Unit. 50,00, sem ICMS): Vlr. Unit. com Tributos <strong>50,50</strong>, IBS/CBS <strong>0,50</strong> e sem tributos <strong>50,00</strong>.</p>
+<p><strong>Figura 23:</strong> Exempo de cálculos de impostos nos módulos de vendas.<br><br><br>Na aba <strong>Dados fiscais</strong>, o pedido de 5 unidades mostra <strong>Total do IBS/CBS 5,89</strong> (CBS 5,30 + IBS 0,59) e <strong>Total Sem Tributos 589,21</strong>.</p>
+<p><strong>Serviço</strong> (<strong>Serviço 000006</strong>, Vlr. Unit. 50,00, sem ICMS): Vlr. Unit. com Tributos <strong>50,50</strong>, IBS/CBS <strong>0,50</strong> e sem tributos <strong>50,00</strong>.</p>
 <h3><br><strong>6.2 O que recalcula sozinho</strong></h3>
 <p>Ao trocar qualquer um destes campos, <strong>todos os itens são recalculados</strong>:</p>
 <ul>
@@ -1013,7 +1003,7 @@ Com tributos = Preço + CBS + IBS + IS
   <li>data de entrega ou data do pedido;</li>
   <li>frete e acréscimo (com as configurações da filial da parte 3.5).</li>
 </ul>
-<p><strong>O recálculo não muda o Vlr. Unit.</strong> Mudam o <strong>Vlr. Unit. com Tributos</strong>, o <strong>total do item</strong> e a divisão (ICMS, IBS/CBS e sem tributos).</p>
+<p><br><strong>O recálculo não muda o Vlr. Unit.</strong> Mudam o <strong>Vlr. Unit. com Tributos</strong>, o <strong>total do item</strong> e a divisão (ICMS, IBS/CBS e sem tributos).</p>
 <p><strong>Exemplo:</strong> no pedido de 5 unidades, trocar o cliente 60312 (Bahia, ICMS 7%) pelo 61576 (Minas Gerais, ICMS 12%):</p>
 <figure class="table">
   <table>
@@ -1053,7 +1043,7 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<h3><br><strong>6.3 Avisos ao salvar</strong></h3>
+<p><strong>Figura 24:</strong> Exemplo de cálculos de impostos conforme alíquota de ICMS.<br><br><br><strong>6.3 Avisos ao salvar</strong></p>
 <p>Os avisos <strong>não impedem</strong> de salvar. Eles avisam que o IBS/CBS não vai ser calculado e que o total vai sair sem ele.</p>
 <figure class="table">
   <table>
@@ -1079,7 +1069,7 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<h3><br><strong>6.4 Total do pedido, limite de crédito e parcelas</strong></h3>
+<p><strong>Figura 25:</strong> Avisos gerados por configurações da reforma tributária.<br><br><br><strong>6.4 Total do pedido, limite de crédito e parcelas</strong></p>
 <p>O <strong>total do pedido</strong> é a soma dos itens com o IBS/CBS, mais o frete, menos o desconto. É esse total que vale para:</p>
 <ul>
   <li>o <strong>limite de crédito</strong> do cliente: um pedido de 639,90 passa do limite de 635,00, mesmo com o preço de venda somando 634,00;</li>
@@ -1110,7 +1100,7 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<h3><br><strong>6.6 Do pedido para a nota</strong></h3>
+<p><strong>Figura 26:</strong> Formas de lançamento de vendas.<br><br><br><strong>6.6 Do pedido para a nota</strong></p>
 <ul>
   <li>O Vlr. Unit. da nota é o <strong>Vlr. Unit. com Tributos</strong> do pedido. <strong>O total da nota é igual ao total do pedido.</strong></li>
   <li>Cada item da nota vai com o <strong>tipo de operação do pedido</strong>, mesmo que ele tenha sido trocado no pedido. A nota busca de novo o CST e a classificação desse tipo.<ul>
@@ -1162,9 +1152,9 @@ Com tributos = Preço + CBS + IBS + IS
     </tbody>
   </table>
 </figure>
-<p>Na nota do pedido inteiro: ICMS <strong>44,79</strong>, base do IBS/CBS <strong>589,22</strong>, CBS <strong>5,30</strong>, IBS <strong>0,59</strong> e <strong>total da nota 639,90</strong>. O IBS/CBS não soma de novo, porque já está dentro dos 127,98.</p>
+<p><strong>Figura 27:</strong> Exemplo de cálculo de impostos na transformação de pedidos/faturas.<br><br>Na nota do pedido inteiro: ICMS <strong>44,79</strong>, base do IBS/CBS <strong>589,22</strong>, CBS <strong>5,30</strong>, IBS <strong>0,59</strong> e <strong>total da nota 639,90</strong>. O IBS/CBS não soma de novo, porque já está dentro dos 127,98.</p>
 <hr>
-<h2><br><strong>7. Frente de caixa (PDV)</strong></h2>
+<h2><strong>7. Frente de caixa (PDV)</strong></h2>
 <p>Vale para a tela <strong>Frente de caixa (FAT0030)</strong>.</p>
 <h3><br><strong>7.1 Natureza e tipo de operação no PDV</strong></h3>
 <p>Na identificação do cliente há dois campos:</p>
