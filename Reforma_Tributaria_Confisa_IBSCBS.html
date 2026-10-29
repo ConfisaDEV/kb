@@ -1,0 +1,1565 @@
+<!--
+title: Reforma Tributária no Confisa (IBS e CBS)
+description: 
+published: true
+date: 2026-10-29T16:20:36.985Z
+tags: 
+editor: ckeditor
+dateCreated: 2026-10-29T16:20:36.985Z
+-->
+
+<h1><strong>Reforma Tributária no Confisa (IBS e CBS)</strong></h1>
+<p>Este material explica como o Confisa trabalha com a Reforma Tributária (IBS e CBS): o que configurar, como montar o preço, como vender e como emitir a nota.<br><br>Versão de <strong>28/10/2026</strong>.</p>
+<blockquote>
+  <p>🆕 <strong>O que mudou nesta versão.</strong> O <strong>preço de venda</strong> (do cadastro do produto ou da tabela de preço) agora é o preço <strong>com ICMS e sem IBS/CBS</strong>. O IBS/CBS é <strong>somado por fora</strong>, e o total do pedido e da nota passa a ser <strong>preço + IBS/CBS</strong>. A versão anterior dizia o contrário ("o preço da tabela é o preço final"): ela não vale mais.</p>
+</blockquote>
+<blockquote>
+  <p>👤 <strong>Pergunte ao contador.</strong> O sistema faz as contas, mas <strong>quem decide o que preencher nos campos fiscais é o contador da empresa</strong>: CST, classificação tributária, tipo de operação de cada natureza, alíquotas, CST do PIS/COFINS, IPI e ICMS. Onde aparecer o 👤, <strong>confirme com o contador antes de preencher</strong>. Os exemplos mostram a conta e não indicam o que a sua empresa deve usar.</p>
+</blockquote>
+<p><br><strong>Como usar:</strong> leia as partes 1 e 2 uma vez. Depois siga a ordem: configurar (parte 3), cadastros (parte 4), montar o preço (parte 5), vender (partes 6, 7 e 8) e emitir a nota (parte 9). Se tiver uma dúvida, procure na parte 11.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Parte</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Assunto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">1</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O que muda, em poucas palavras</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">2</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A regra do preço: o preço de venda tem o ICMS, e o IBS/CBS vai por fora</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">3</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Configurações da filial</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">4</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastros que precisam estar certos</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Formação do preço de venda e tabela de preço</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">6</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Pedido e orçamento</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">7</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Frente de caixa (PDV)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">8</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">App do representante</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">9</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Nota fiscal</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">10</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Como conferir a conta</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">11</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Dúvidas comuns</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">12</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Como começar: lista passo a passo</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><br><strong>Telas citadas:</strong></p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Tela</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Código</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de filiais/empresas (aba <strong>Configurações adicionais</strong>)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0019</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de Natureza de Operação</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">NTF0002</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Tipos de operações dos documentos fiscais</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0230</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de CST do IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0228</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de Classificação Tributária do IBS/CBS (cClassTrib)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0229</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Configurações de regras da tributação fiscal</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0231</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de Estados</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0005</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de Clientes</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0014</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de produtos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0030</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de classificações fiscais (NCM / NBS)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0027</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Formação do preço de venda</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">ADM0011</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cadastro de Tabelas de Preços</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CAD0028</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Pedido de Venda</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">FAT0001</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Orçamento de venda</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">FAT0007</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Consignação de venda</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">FAT0008</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Bonificação</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">FAT0059</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Fatura</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">FAT0010</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Frente de caixa (PDV)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">FAT0030</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Notas fiscais emitidas</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">NTF0020</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><br><strong>Os dados dos exemplos</strong></h3>
+<p><br>Os exemplos usam cadastros que existem de verdade no banco de demonstração, para você poder repetir a conta na tela.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O quê</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Dado usado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Filial</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Filial <strong>1</strong>, de <strong>São Paulo</strong>, regime normal (CRT 3)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Alíquotas do IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>CBS 0,90%</strong> · <strong>IBS estadual 0,10%</strong> · <strong>IBS municipal 0%</strong>, total <strong>1%</strong> (as alíquotas de teste de 2026)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Produto</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>07919CJ</strong>, Conjunto masculino, preço de venda <strong>126,80</strong>. Os tamanhos 4 a 10 custam <strong>112,80</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Serviço</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>000006</strong>, Corte, costura e embalagem de jalecos, vendido por <strong>50,00</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cliente da Bahia</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>60312</strong>, Santa Maria Calçados e Roupas Ltda, com inscrição estadual: <strong>ICMS 7%</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cliente de Minas Gerais</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>61576</strong>, Alpha Kids Comércio Ltda, com inscrição estadual: <strong>ICMS 12%</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Natureza de operação</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>02</strong>, "Vendas fora estado" (CFOP 6101, CST do ICMS 000), com o <strong>tipo de operação 133</strong> "VENDAS" (CST do IBS/CBS 000, classificação 000001)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Natureza do PDV</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>51</strong>, "Venda NFe", com o tipo de operação 133</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><br>Os valores vão mudar quando saírem as alíquotas de 2027. <strong>A conta continua a mesma.</strong></p>
+<hr>
+<h2><br><strong>1. O que muda, em poucas palavras</strong></h2>
+<p><strong>IBS e CBS</strong> são os impostos novos.</p>
+<ul>
+  <li><strong>CBS</strong> é o imposto federal.</li>
+  <li><strong>IBS</strong> é o imposto do estado e do município.</li>
+</ul>
+<p>Eles vão substituir o PIS, a COFINS, o ICMS e o ISS aos poucos, até 2033.</p>
+<p><strong>A partir de 01/01/2027:</strong></p>
+<ul>
+  <li>O <strong>preço de venda</strong> continua como é hoje: tem o ICMS e os seus custos e margem.</li>
+  <li>O sistema <strong>soma o IBS/CBS por fora</strong>, como faz com o IPI. O resultado é o <strong>"Vlr. Unit. com Tributos"</strong>, e é esse valor que o cliente paga.</li>
+  <li>Na nota, o IBS/CBS vai <strong>dentro do valor do produto</strong> (é a regra da Sefaz). Por isso a nota <strong>não soma o IBS/CBS outra vez</strong> no total: ele já está no valor do produto.</li>
+  <li>A nota passa a mostrar o <strong>valor sem tributos</strong>: quanto o produto vale sem ICMS, sem IBS e sem CBS.</li>
+  <li>O PIS e a COFINS acabam.</li>
+</ul>
+<p><strong>Exemplo:</strong> 1 unidade do produto <strong>07919CJ</strong> (preço de venda <strong>126,80</strong>) para o cliente da Bahia (ICMS 7%), com IBS/CBS de 1%:</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Parte do preço</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Sem tributos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">117,84</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">ICMS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">8,96</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">1,18</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Total que o cliente paga (Vlr. Unit. com Tributos)</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>127,98</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>O preço de venda é <strong>126,80</strong> e o cliente paga <strong>127,98</strong>. A diferença, <strong>1,18</strong>, é o IBS/CBS.</p>
+<p><strong>O que muda na tela:</strong></p>
+<ul>
+  <li>No Pedido de Venda, no Orçamento, na Consignação, na Bonificação e na Fatura há uma coluna nova: <strong>"Vlr. Unit. com Tributos"</strong>, ao lado do "Vlr. Unit.".</li>
+  <li>O <strong>total do item</strong> passa a ser o Vlr. Unit. com Tributos × a quantidade.</li>
+  <li>O "Vlr. Unit." é preenchido e alterado como hoje.</li>
+  <li>A <strong>natureza de operação</strong> e o <strong>tipo de operação</strong> precisam estar preenchidos no pedido (parte 6) e no PDV (parte 7).</li>
+</ul>
+<hr>
+<h2><br><strong>2. A regra do preço: o preço de venda tem o ICMS, e o IBS/CBS vai por fora</strong></h2>
+<p>Esta é a parte mais importante.</p>
+<p><strong>O preço da tabela de preço (ou do cadastro do produto) é o preço de venda com o ICMS dentro e sem o IBS/CBS.</strong> Na venda, o sistema calcula o IBS/CBS sobre esse preço e soma por fora.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Onde</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que acontece com o preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Formação do preço de venda (ADM0011)</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">É onde se monta o preço e a margem. A tela mostra o IBS, a CBS e o IS <strong>por fora</strong> do preço (parte 5)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Tabela de preço / cadastro do produto</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Guarda o <strong>preço de venda</strong>, com ICMS e sem IBS/CBS</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Pedido, Orçamento, Consignação, Bonificação e Fatura</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O <strong>Vlr. Unit.</strong> vem da tabela como está. O sistema calcula o <strong>Vlr. Unit. com Tributos</strong> (preço + IBS/CBS), e o total do item usa esse valor (parte 6)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Frente de caixa (PDV)</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A mesma conta do pedido (parte 7)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Notas fiscais emitidas (NTF0020)</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O Vlr. Unit. da nota é o <strong>Vlr. Unit. com Tributos</strong> do pedido. Na nota digitada, o sistema faz a mesma conta (parte 9)</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>Por que assim:</strong></p>
+<ul>
+  <li><strong>A empresa recebe o preço que definiu.</strong> O IBS/CBS é do governo e vai por fora, sem tirar da margem.</li>
+  <li><strong>O ICMS continua dentro do preço</strong>, como sempre esteve.</li>
+  <li><strong>A Sefaz pede o IBS/CBS dentro do valor do produto na nota.</strong> O sistema leva o valor com tributos para a nota, e a conta fecha.</li>
+</ul>
+<p><strong>Exemplo:</strong> o mesmo produto 07919CJ (126,80), 1 unidade, vendido com ICMS diferente:</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Venda</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Preço de venda</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit. com Tributos (cliente paga)</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">ICMS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">IBS/CBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sem tributos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Cliente da Bahia (ICMS 7%)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>127,98</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">8,96</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">1,18</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">117,84</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cliente de Minas Gerais (ICMS 12%)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>127,91</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">15,35</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">1,11</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">111,45</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>O IBS/CBS é calculado <strong>depois de tirar o ICMS</strong>. Com ICMS maior, a base do IBS/CBS fica menor, e o cliente paga um pouco menos. <strong>Em todas as vendas, o preço de venda menos o IBS/CBS dá 126,80.</strong></p>
+<blockquote>
+  <p>⚠️ <strong>Não coloque o IBS/CBS dentro do preço da tabela.</strong> O sistema vai somar o IBS/CBS outra vez por fora, e o cliente paga o imposto duas vezes.</p>
+</blockquote>
+<blockquote>
+  <p>ℹ️ <strong>O total da venda muda quando a alíquota do IBS/CBS muda.</strong> Se a alíquota subir em 2027, o mesmo preço de venda vai dar um total maior para o cliente. A margem da empresa fica a mesma.</p>
+</blockquote>
+<hr>
+<h2><br><strong>3. Configurações da filial</strong></h2>
+<p>As configurações desta parte ficam na tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>, aba <strong>Configurações adicionais</strong>. Cada uma vale só para a filial em que foi preenchida.</p>
+<blockquote>
+  <p>⚠️ <strong>Depois de mudar uma configuração da filial, feche e abra o sistema.</strong> As telas só leem as configurações quando são abertas.</p>
+</blockquote>
+<h3><strong>3.1 As que ligam a reforma</strong></h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Configuração da filial</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que é</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que colocar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><code>DTINICIORT</code></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Liga a reforma na filial a partir desta data. <strong>Vazia = reforma desligada</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Regime normal: preenchida. <strong>Simples Nacional: vazia</strong>, até sair a regra do Simples 👤</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><code>DTINICIOIBSCBSRT</code></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Data a partir da qual o IBS/CBS <strong>soma por fora</strong> no pedido e vai <strong>dentro do valor do produto</strong> na nota. O PIS/COFINS acaba nesta data</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>01/01/2027</strong> (vazia também vale 01/01/2027)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><code>ALIMENTARXMLRT</code></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Envia as informações do IBS/CBS no <strong>arquivo da nota (XML)</strong>. Em N, a nota calcula, mas o XML sai sem elas</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>S</strong> no regime normal</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Também conta o campo <strong>"Código CRT"</strong> da tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>: em 2026, só o regime normal (CRT 3) calcula a reforma. 👤 O contador confirma o regime da empresa.</p>
+<p><strong>Exemplo</strong> (5 unidades do 07919CJ para o cliente 60312, com <code>DTINICIOIBSCBSRT</code> = 01/01/2027):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Data de entrega do pedido</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit.</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit. com Tributos</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">IBS/CBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Total do item</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">15/12/2026</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">vazio</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>634,00</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">10/01/2027</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5,89</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>639,90</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<blockquote>
+  <p>⚠️ <strong>O total do pedido muda com a data.</strong> Um pedido de 2026 com entrega em 2027 soma o IBS/CBS. Se a entrega voltar para 2026, o IBS/CBS sai, e o total cai.</p>
+</blockquote>
+<h3><br><strong>3.2 As que fazem o pedido calcular</strong></h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Configuração da filial</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sim</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Não</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><code>CALCIMPOSTOVENDA</code></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O pedido calcula o IBS/CBS e o Vlr. Unit. com Tributos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O pedido <strong>não calcula</strong> e avisa ao salvar. O total fica sem IBS/CBS</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><code>INFNATPEDIDO</code></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Dá para informar a natureza no pedido. <strong>Precisa ficar Sim</strong>: sem natureza o sistema não sabe que imposto usar</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O pedido fica sem natureza, e o IBS/CBS não é calculado</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><br><strong>3.3 IBS/CBS na base do ICMS: configuração da filial </strong><code><strong>ICMSSOBREIBSCBS</strong></code></h3>
+<p>Diz se o ICMS é cobrado <strong>em cima</strong> do IBS/CBS, que fica dentro do valor do produto na nota.</p>
+<p>👤 <strong>Decisão do contador</strong> (e do advogado, quando houver ação judicial).</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Valor</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Quando usar</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Efeito</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Sim</strong> (vazia também vale Sim)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Sempre, a não ser com decisão judicial</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O ICMS é calculado sobre o valor do produto com o IBS/CBS</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Não</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Só com decisão judicial</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O IBS/CBS sai da base do ICMS, e o ICMS fica um pouco menor</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Na tela <strong>Cadastro de Estados (CAD0005)</strong> existe o campo <strong>"IBS/CBS compõe base do ICMS"</strong>:</p>
+<ul>
+  <li><strong>Vazio:</strong> vale a configuração da filial <code>ICMSSOBREIBSCBS</code>.</li>
+  <li><strong>Preenchido:</strong> vale no lugar da configuração da filial, para <strong>todas as filiais</strong> naquele estado. Use só se for regra do estado. 👤</li>
+</ul>
+<p><strong>Exemplo</strong> (5 unidades do 07919CJ, cliente 60312, ICMS 7%):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">&nbsp;</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sim</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Não</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Vlr. Unit. com Tributos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">ICMS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">44,79</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">44,38</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5,89</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5,90</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Sem tributos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">589,21</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">589,62</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Total do item</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>639,90</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>639,90</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><br>Com <strong>Não</strong>, só o ICMS normal muda. A substituição tributária e o diferencial de alíquota continuam sobre o valor cheio.</p>
+<h3><br><strong>3.4 Desconto no preço unitário: configuração da filial </strong><code><strong>DESCVLRUNIT</strong></code></h3>
+<p>Muda <strong>onde o desconto do item aparece</strong>. <strong>O IBS/CBS é o mesmo nos dois casos.</strong></p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Valor</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que acontece</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Sim</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O desconto do item é tirado <strong>do próprio Vlr. Unit.</strong>, e o cliente que recebe o orçamento não vê que teve desconto (126,80 com 10% vira 114,12)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Não</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O Vlr. Unit. fica cheio, e o desconto aparece separado</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><br>Exemplo completo na parte 11.1.</p>
+<h3><br><strong>3.5 Frete e acréscimo no pedido</strong></h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Configuração da filial</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><code>DESPESASFRETENOPEDIDO</code></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O frete do pedido entra na conta do IBS/CBS</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><code>CALCACRESCIMOFATURA</code></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O acréscimo da condição de pagamento entra na conta do IBS/CBS</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>O frete e o acréscimo são <strong>divididos entre os itens pela quantidade</strong>, igual à nota.</p>
+<p><strong>Diferente do produto:</strong> o IBS/CBS do frete fica <strong>dentro do valor do frete</strong>, sem somar por fora. O frete aumenta o IBS/CBS do item, mas não muda o Vlr. Unit. com Tributos.</p>
+<p><strong>Exemplo</strong> (5 unidades do 07919CJ, cliente 60312, frete de 5,00):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">&nbsp;</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sem frete</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Com frete de 5,00</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Vlr. Unit. com Tributos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Total do item</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">639,90</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">639,90</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">IBS/CBS do item</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5,89</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>5,93</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Total do pedido</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>639,90</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>644,90</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2><br><strong>4. Cadastros que precisam estar certos</strong></h2>
+<p>Faça nesta ordem, junto com o contador. Sem estes cadastros o sistema <strong>não calcula</strong> o IBS/CBS e também não mostra erro: os campos ficam vazios, e o total sai sem o IBS/CBS.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">#</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Tela</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que conferir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">1</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Cadastro de CST do IBS/CBS (CAD0228)</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O campo <strong>"IBS/CBS"</strong> marcado nos CSTs que calculam IBS/CBS. <strong>Exemplo:</strong> CST 000 marcado</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">2</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Cadastro de Classificação Tributária do IBS/CBS (CAD0229)</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">As classificações tributárias (cClassTrib) que a empresa usa. <strong>Exemplo:</strong> 000001</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">3</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Configurações de regras da tributação fiscal (CAD0231)</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">As alíquotas do IBS/CBS, com <strong>vigência que cubra a data</strong> da venda. A CBS oficial de 2027 sai até 15/12/2026</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">4</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Tipos de operações dos documentos fiscais (CAD0230)</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Os tipos de operação que a empresa usa (venda, bonificação, remessa...). <strong>Exemplo:</strong> 133 "VENDAS", com CST 000 e classificação 000001</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Cadastro de Natureza de Operação (NTF0002)</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O campo <strong>"Cod. Tipo Operação"</strong> preenchido em cada natureza de venda. <strong>Exemplo:</strong> natureza 02 com o tipo 133</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">6</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Cadastro de Clientes (CAD0014)</strong> ou <strong>Cadastro de Estados (CAD0005)</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A natureza que entra sozinha no pedido: o campo <strong>"Natureza padrão para venda"</strong> do cliente ou, se ele estiver vazio, a natureza padrão do estado do cliente para a filial. <strong>Exemplo:</strong> clientes 60312 e 61576 com a natureza 02</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">7</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Cadastro de Clientes (CAD0014)</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Endereço, cidade e inscrição estadual certos. Sem o estado, o sistema não sabe o ICMS, e sem o ICMS a conta do IBS/CBS sai errada</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">8</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Cadastro de Estados (CAD0005)</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O campo <strong>"IBS/CBS compõe base do ICMS"</strong> vazio, a não ser por regra do estado</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">9</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Cadastro de Natureza de Operação (NTF0002)</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O CST do PIS/COFINS de 2027 (parte 4.1)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">10</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Configurações de regras da tributação fiscal (CAD0231)</strong>, aba <strong>Padrão</strong> 👤</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">As alíquotas padrão da filial, no quadro <strong>"Tributações padrões - Geral"</strong>: CBS, IBS UF e IBS Município, com redução e diferimento. São usadas na Formação do preço de venda (ADM0011) e no Cadastro de Tabelas de Preços (CAD0028). <strong>Exemplo:</strong> CBS 0,90, IBS UF 0,10, IBS Município 0</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><br><br><strong>4.1 CST do PIS/COFINS a partir de 2027 👤</strong></h3>
+<p>A partir da data da configuração da filial <code>DTINICIOIBSCBSRT</code> (01/01/2027), a nota <strong>zera sozinha</strong> o PIS e a COFINS: base, alíquota, valor e retenção. Mas a Sefaz <strong>continua exigindo</strong> o PIS e a COFINS em todo item, com um CST. <strong>O sistema não escolhe esse CST:</strong> ele continua vindo do cadastro, como hoje.</p>
+<p>De onde o CST vem (vale o primeiro preenchido):</p>
+<ol>
+  <li>cadastro de <strong>CFOP</strong>;</li>
+  <li><strong>Cadastro de Natureza de Operação (NTF0002)</strong>;</li>
+  <li><strong>Cadastro de classificações fiscais (CAD0027)</strong>.</li>
+</ol>
+<p>Se a natureza tiver marcado o campo <strong>"Forçar o cálculo de PIS/COFINS na nota"</strong> (Cadastro de Natureza de Operação), vale o CST da natureza, no lugar dos outros.</p>
+<p><strong>Na virada do ano, com o contador:</strong> no <strong>Cadastro de Natureza de Operação (NTF0002)</strong>, em cada natureza de venda, informar o CST do PIS e da COFINS que o contador indicar e marcar <strong>"Forçar o cálculo de PIS/COFINS na nota"</strong>.</p>
+<ul>
+  <li>A natureza usada para <strong>devolver vendas de 2026</strong> fica com o CST antigo.</li>
+  <li>Se nada for feito, a nota sai com os valores zerados, mas com o CST de antes.</li>
+</ul>
+<h3><strong>4.2 O ICMS que entra na conta do IBS/CBS</strong></h3>
+<p>O IBS/CBS é calculado depois de tirar o ICMS. Por isso o ICMS do item precisa estar certo <strong>já no pedido</strong>. O pedido usa o mesmo ICMS que a nota vai usar, com estas regras:</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Situação</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">ICMS usado na conta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Filial do <strong>Simples Nacional</strong> ou <strong>MEI</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Nenhum</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Natureza que <strong>não calcula ICMS</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Nenhum</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CST do ICMS <strong>30, 40, 41, 50 ou 60</strong> (isento, não tributado, suspenso, ST cobrada antes)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Nenhum</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Natureza com <strong>redução da base</strong> e CST do ICMS <strong>20, 51, 70 ou 90</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A alíquota com a redução. <strong>Exemplo:</strong> 18% com redução de 33,33% = 12%</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Os demais casos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A alíquota do ICMS do item (estado do cliente e classificação fiscal)</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>Como o sistema chega no imposto:</strong></p>
+<pre><code class="language-plaintext">Natureza → Tipo de operação → CST e classificação → Alíquota (pela data) → Imposto
+</code></pre>
+<hr>
+<h2><br><strong>5. Formação do preço de venda e tabela de preço</strong></h2>
+<blockquote>
+  <p>ℹ️ Se a sua tela <strong>Formação do preço de venda (ADM0011)</strong> ainda não mostra os campos de IBS, CBS e IS, fale com o suporte.</p>
+</blockquote>
+<h3><br><strong>5.1 Para que serve</strong></h3>
+<p>Na <strong>Formação do preço de venda (ADM0011)</strong> você monta o preço de venda e a margem, como antes. Agora a tela também mostra, para cada produto, quanto dá de <strong>IBS</strong>, <strong>CBS</strong> e <strong>IS</strong> e o <strong>valor com tributos</strong>.</p>
+<p>Com o preço definido, você pode:</p>
+<ul>
+  <li><strong>alterar o preço do próprio cadastro do produto</strong> (botão <strong>"Atualizar preços no cadastro"</strong>); ou</li>
+  <li><strong>criar uma nova tabela de preço</strong> com esses preços (botão <strong>"Gerar nova tabela de preço"</strong>, parte 5.5).</li>
+</ul>
+<p>O <strong>IS</strong> (Imposto Seletivo) só existe para alguns produtos definidos em lei. <strong>Por enquanto a coluna do IS fica zerada</strong>, porque as alíquotas do IS ainda não estão no sistema.</p>
+<h3><br><strong>5.2 Como a tela calcula o IBS, a CBS e o IS</strong></h3>
+<ul>
+  <li>O <strong>"Preço venda sugerido"</strong> é o preço de venda: tem o ICMS e <strong>não tem</strong> o IBS, a CBS e o IS. É ele que vai para a tabela e para o cadastro do produto.</li>
+  <li>A coluna <strong>"Vlr. com Tributos"</strong> mostra o preço <strong>mais</strong> o IBS, a CBS e o IS. É uma <strong>estimativa</strong> de quanto o cliente vai pagar no pedido.</li>
+  <li>As alíquotas usadas são as <strong>alíquotas padrão da filial</strong>: tela <strong>Configurações de regras da tributação fiscal (CAD0231)</strong>, aba <strong>Padrão</strong>, quadro <strong>"Tributações padrões - Geral"</strong> (já com a redução e o diferimento, se houver). 👤 Quem define essas alíquotas é o contador.</li>
+  <li>A tela <strong>não usa</strong> a natureza, o tipo de operação nem o estado do cliente. No pedido e na nota, o imposto é calculado pela regra completa (parte 6).</li>
+  <li>O <strong>ICMS não entra na base</strong> do IBS/CBS.</li>
+</ul>
+<p><strong>A conta:</strong></p>
+<pre><code class="language-plaintext">Base         = Preço − ICMS (Preço × % ICMS Venda)
+CBS          = Base × % CBS
+IBS          = Base × % IBS
+IS           = Base × % IS
+Com tributos = Preço + CBS + IBS + IS
+</code></pre>
+<p><strong>Exemplo</strong> (produto 07919CJ, preço sugerido 126,80, % ICMS Venda 7%, CBS 0,90%, IBS 0,10%):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Preço sugerido</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">ICMS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Base</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">CBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">IBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">IS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. com Tributos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">8,88</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">117,92</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">1,06</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">0,12</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">0,00</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>127,98</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>O pedido para o cliente da Bahia (ICMS 7%) dá o mesmo <strong>127,98</strong> (parte 6.1).</p>
+<p><strong>Lembretes:</strong></p>
+<ul>
+  <li>Mudou o <strong>"% ICMS Venda"</strong>? Clique em <strong>"Calcular preços"</strong> para refazer a conta.</li>
+  <li>Mudou as alíquotas no CAD0231? Feche e abra a tela da Formação do preço de venda.</li>
+</ul>
+<h3><br><strong>5.3 Tabelas por alíquota de ICMS (não por estado)</strong></h3>
+<p>O ICMS fica <strong>dentro</strong> do preço de venda. Para a margem ser a mesma em todas as vendas, crie <strong>uma tabela de preço por alíquota de ICMS</strong>, e não uma por estado. Assim ficam poucas tabelas: por exemplo, a da alíquota interna, a de 12%, a de 7% e a de 4%. 👤 <strong>O contador confirma quais alíquotas valem para os seus produtos e as suas vendas.</strong></p>
+<p><strong>Na venda, o imposto é definido pela natureza informada no pedido, por meio do tipo de operação</strong> (parte 6). Use a tabela de preço da alíquota de ICMS daquela venda.</p>
+<p><strong>Consumidor final de outro estado</strong> (sem inscrição estadual) tem regra própria de ICMS (parte 11.8). Se a empresa vende para esse público, faça uma tabela para ele.</p>
+<h3><br><strong>5.4 Quando refazer as tabelas</strong></h3>
+<p>O preço de venda fica parado na tabela. O IBS/CBS é calculado na hora da venda, então <strong>uma alíquota nova de IBS/CBS não muda a margem</strong>: muda só o total que o cliente paga.</p>
+<p>Refaça as tabelas na <strong>Formação do preço de venda (ADM0011)</strong> quando mudar o que está <strong>dentro</strong> do preço:</p>
+<ul>
+  <li>o <strong>ICMS</strong> (de <strong>2029 a 2033</strong>, o ICMS cai <strong>todo ano</strong>);</li>
+  <li>os seus custos ou a sua margem.</li>
+</ul>
+<p>Quando sair uma alíquota nova de IBS/CBS (a <strong>CBS de 2027</strong> sai até <strong>15/12/2026</strong>), atualize a tela <strong>Configurações de regras da tributação fiscal (CAD0231)</strong>, inclusive a aba <strong>Padrão</strong>, usada pela Formação do preço de venda e pelo Cadastro de Tabelas de Preços.</p>
+<p>Nas tabelas que já existem, os valores de IBS, CBS e IS dos itens só mudam quando você informa os novos percentuais no <strong>Cadastro de Tabelas de Preços (CAD0028)</strong> e salva (parte 5.6).</p>
+<h3><br><strong>5.5 Gerar uma nova tabela de preço pela Formação do preço de venda</strong></h3>
+<ol>
+  <li>Na <strong>Formação do preço de venda (ADM0011)</strong>, adicione os produtos e clique em <strong>"Calcular preços"</strong>.</li>
+  <li>Marque a coluna <strong>"Atualizar"</strong> nos itens que vão para a tabela. <strong>Só os marcados</strong> vão.</li>
+  <li>Clique em <strong>"Gerar nova tabela de preço"</strong>.</li>
+  <li>Na janela, informe o <strong>código</strong> (até 3 letras ou números) e o <strong>nome</strong> da tabela e clique em <strong>Salvar</strong> (ou F8).<ul>
+      <li>Se o código já existir, o sistema avisa e a janela continua aberta para corrigir.</li>
+      <li><strong>ESC</strong> ou <strong>Cancelar</strong> fecha sem criar nada.</li>
+    </ul>
+  </li>
+  <li>Aparece a mensagem com a quantidade de itens gravados. A tabela já pode ser aberta no <strong>Cadastro de Tabelas de Preços (CAD0028)</strong>.</li>
+</ol>
+<p><strong>O que vai para a tabela:</strong></p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Onde</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que é gravado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Itens</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Preço</strong> = o preço venda sugerido. Também o <strong>Vlr. CBS</strong>, <strong>Vlr. IBS</strong>, <strong>Vlr. IS</strong> e <strong>Vlr. com Tributos</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Cabeçalho</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Destino Venda, Ativo, Fator 1, o <strong>% ICMS Venda</strong> usado e os <strong>% CBS</strong>, <strong>% IBS</strong> e <strong>% IS</strong> usados</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<blockquote>
+  <p>⚠️ <strong>Item com preço sugerido 0 vai com preço 0.</strong> Confira os itens marcados antes de gerar.</p>
+</blockquote>
+<p><strong>Preço diferente por cor e tamanho.</strong> Se a filial usa preço por cor e/ou tamanho (configurações da filial <code>PRECODIFCOR</code> e <code>PRECODIFTAM</code>) e o produto tem preços próprios no <strong>Cadastro de produtos (CAD0030)</strong>, aba <strong>Preços</strong> → <strong>Diferenciais de preços</strong>, a tabela recebe também <strong>uma linha para cada cor/tamanho</strong>. O preço de cada linha é reajustado <strong>na mesma proporção</strong> do preço sugerido, e os tributos são calculados sobre o preço dela.</p>
+<p><strong>Exemplo:</strong> produto <strong>07919CJ</strong>, preço de cadastro <strong>126,80</strong>, preço sugerido <strong>130,00</strong> (+2,52%), % ICMS Venda 7%. Nos diferenciais, os tamanhos 4 a 10 custam <strong>112,80</strong> e os tamanhos 12 a 18 custam <strong>126,80</strong>.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Linha da tabela</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Preço</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">CBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">IBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. com Tributos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Produto (sem cor e tamanho)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">130,00</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">1,09</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">0,12</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">131,21</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Tamanhos 12 a 18</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">130,00</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">1,09</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">0,12</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">131,21</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Tamanhos 4 a 10</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">115,65</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">0,97</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">0,11</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">116,73</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Os tamanhos que eram mais baratos no cadastro continuam mais baratos na tabela. Se quiser <strong>o mesmo preço para todos os tamanhos</strong>, ajuste os diferenciais do produto antes de gerar a tabela, ou acerte os itens depois no Cadastro de Tabelas de Preços.</p>
+<h3><br><strong>5.6 Tabela de preço (CAD0028)</strong></h3>
+<p>No <strong>Cadastro de Tabelas de Preços (CAD0028)</strong>, a grade de produtos tem as colunas <strong>Vlr. IBS</strong>, <strong>Vlr. CBS</strong>, <strong>Vlr. IS</strong> e <strong>Vlr. com Tributos</strong>. Elas <strong>não são digitadas</strong>: o sistema calcula sozinho sempre que o preço do item muda (ao digitar o preço, incluir produtos, copiar de outra tabela ou importar de arquivo). A conta é a mesma da parte 5.2.</p>
+<p><strong>Os percentuais da tabela</strong> (% CBS, % IBS e % IS) ficam no cabeçalho:</p>
+<ul>
+  <li><strong>Tabela nova criada no CAD0028:</strong> vêm as alíquotas padrão da filial (CAD0231, aba Padrão). O % IS vem 0.</li>
+  <li><strong>Tabela gerada pela Formação do preço de venda:</strong> vêm os percentuais usados lá (parte 5.5).</li>
+</ul>
+<p><strong>O que muda com a configuração da filial </strong><code><strong>CALCULARFATORTABPRECO</strong></code><strong>:</strong></p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">&nbsp;</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sim</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Não</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Aba <strong>"Cálculo do fator sobre o preço"</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Aparece. Os campos <strong>% CBS</strong>, <strong>% IBS</strong> e <strong>% IS</strong> podem ser alterados</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Não aparece. Valem as alíquotas padrão da filial</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">ICMS usado na base do IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O <strong>ICMS</strong> informado nessa aba</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O <strong>% ICMS Venda da filial</strong>, o mesmo da Formação do preço de venda</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>Ao salvar a tabela</strong> com algum percentual, o ICMS ou o destino alterados, <strong>todos os itens são recalculados</strong>.</p>
+<p><strong>O cálculo do fator não mudou:</strong></p>
+<pre><code class="language-plaintext">Fator = 1 ÷ (1 − (Comissão + ICMS + IPI + PIS + COFINS + Lucro) ÷ 100)
+</code></pre>
+<p><strong>A CBS, o IBS e o IS não entram no fator</strong>, porque ficam por fora do preço. Eles servem só para calcular os tributos dos itens.</p>
+<p><strong>Exemplo:</strong> Comissão 5, ICMS 18, Lucro 20 (o resto 0): fator = 1 ÷ 0,57 = <strong>1,7544</strong>. Mudar o % CBS não muda o fator.</p>
+<p>Se a soma dos percentuais do fator chegar a 100% ou mais, o sistema avisa e não salva.</p>
+<p><strong>Outros casos:</strong></p>
+<ul>
+  <li><strong>Tabela de compra</strong> (Destino Compra): as colunas de tributos ficam vazias.</li>
+  <li><strong>Tabela antiga</strong> (de antes desta versão): o item é calculado com as alíquotas padrão quando o preço dele for alterado. Para calcular todos os itens de uma vez, informe os percentuais no cabeçalho e salve (com a configuração da filial <code>CALCULARFATORTABPRECO</code> = Sim).</li>
+</ul>
+<h3><br><strong>5.7 O "Vlr. com Tributos" da tabela é uma estimativa</strong></h3>
+<p>O <strong>"Preço"</strong> da tabela é o que vai para o pedido. O pedido soma o IBS/CBS por fora e chega num valor <strong>muito próximo</strong> do "Vlr. com Tributos" da tabela.</p>
+<p>A diferença, quando existe, é de centavos e tem três motivos:</p>
+<ul>
+  <li>a tabela usa o <strong>% ICMS Venda</strong> da filial, e o pedido usa o ICMS <strong>do estado do cliente</strong> (parte 4.2);</li>
+  <li>a tabela usa as <strong>alíquotas padrão</strong>, e o pedido usa a alíquota <strong>do tipo de operação na data da entrega</strong>;</li>
+  <li>a conta do pedido é a mesma da nota, que arredonda em outro ponto.</li>
+</ul>
+<p><strong>Exemplo:</strong> tamanho 4, preço <strong>115,65</strong>. A tabela mostra <strong>116,73</strong>, e o pedido para o cliente da Bahia (ICMS 7%) mostra <strong>116,72</strong>.</p>
+<p><strong>O que vale é o valor do pedido</strong>, que é o mesmo da nota.</p>
+<blockquote>
+  <p>⚠️ <strong>Não grave o "Vlr. com Tributos" no "Preço".</strong> O pedido somaria o IBS/CBS outra vez.</p>
+</blockquote>
+<hr>
+<h2><br><strong>6. Pedido e orçamento</strong></h2>
+<p>Vale para o <strong>Pedido de Venda (FAT0001)</strong>, o <strong>Orçamento de venda (FAT0007)</strong>, a <strong>Consignação de venda (FAT0008)</strong> e a <strong>Bonificação (FAT0059)</strong>.</p>
+<blockquote>
+  <p>⚠️ <strong>Dois campos precisam estar preenchidos na venda: a natureza de operação e o tipo de operação.</strong> São eles que definem o imposto. Sem eles o pedido <strong>não calcula</strong> o IBS/CBS: os campos ficam vazios, o total sai sem IBS/CBS e, ao salvar, aparece um aviso (o pedido salva mesmo assim).</p>
+  <figure class="table">
+    <table>
+      <thead>
+        <tr>
+          <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Campo na tela</th>
+          <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Onde fica</th>
+          <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Para que serve</th>
+          <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">De onde vem</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Natureza de operação</strong> ("Cód. nat. op")</td>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Cabeçalho</td>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Diz que tipo de venda é</td>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Do <strong>"Natureza padrão para venda"</strong> do Cadastro de Clientes ou, se vazio, da natureza padrão do estado (Cadastro de Estados). Pode ser trocada</td>
+        </tr>
+        <tr>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>"Tipo Operação NF"</strong></td>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Aba <strong>Dados fiscais</strong></td>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Diz qual regra de IBS/CBS usar (CST, classificação e alíquota)</td>
+          <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Do campo "Cod. Tipo Operação" da natureza (Cadastro de Natureza de Operação). Pode ser trocado</td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+</blockquote>
+<h3><br><strong>6.1 Lançando</strong></h3>
+<ol>
+  <li><strong>Data:</strong> a data que vale para o imposto é a <strong>data de entrega</strong>. Sem data de entrega, vale a <strong>data do pedido</strong>.</li>
+  <li><strong>Cliente:</strong> define o estado (para o ICMS e o IBS).<ul>
+      <li>O estado vem do endereço do <strong>Cadastro de Clientes (CAD0014)</strong>. Se a natureza manda calcular pelo endereço de entrega, usa o endereço de entrega.</li>
+    </ul>
+  </li>
+  <li><strong>Natureza de operação:</strong> confira se está preenchida e se é a certa para a venda.</li>
+  <li><strong>"Tipo Operação NF"</strong> (aba <strong>Dados fiscais</strong>): confira se está preenchido e se é o certo. Pode ser trocado ali.</li>
+  <li><strong>Tabela de preço:</strong> use a tabela da alíquota de ICMS da venda (parte 5.3).</li>
+  <li><strong>Itens:</strong> inclua o produto e a quantidade e <strong>salve o item</strong>.<ul>
+      <li>O <strong>Vlr. Unit.</strong> vem da tabela <strong>como está</strong> e pode ser alterado, como hoje.</li>
+      <li>O <strong>Vlr. Unit. com Tributos</strong>, o IBS/CBS e o sem tributos são calculados <strong>ao salvar o item</strong>.</li>
+      <li>O <strong>Vlr. Unit. com Tributos não é digitado</strong>: ele sempre sai da conta.</li>
+      <li>Serviço também soma o IBS/CBS por fora. Só não tem ICMS.</li>
+    </ul>
+  </li>
+  <li><strong>Grade de itens:</strong> confira as colunas <strong>"Vlr. Unit. com Tributos"</strong>, <strong>"Total do IBS/CBS"</strong> e <strong>"Total sem tributos"</strong>.</li>
+  <li><strong>Totais:</strong> na aba <strong>Dados fiscais</strong>, confira <strong>"Total do IBS/CBS"</strong> e <strong>"Total Sem Tributos"</strong>.</li>
+</ol>
+<p><strong>Exemplo</strong> (produto 07919CJ, cliente 60312 da Bahia, natureza 02, tipo de operação 133, ICMS 7%, IBS/CBS 1%):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Quantidade</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit.</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit. com Tributos</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Total do item</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Total do IBS/CBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Total sem tributos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">1</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">1,18</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">117,84</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">639,90</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5,89</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">589,21</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">10</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">1.279,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">11,79</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">1.178,43</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Na aba <strong>Dados fiscais</strong>, o pedido de 5 unidades mostra <strong>Total do IBS/CBS 5,89</strong> (CBS 5,30 + IBS 0,59) e <strong>Total Sem Tributos 589,21</strong>.</p>
+<p><strong>Serviço</strong> (serviço 000006, Vlr. Unit. 50,00, sem ICMS): Vlr. Unit. com Tributos <strong>50,50</strong>, IBS/CBS <strong>0,50</strong> e sem tributos <strong>50,00</strong>.</p>
+<h3><br><strong>6.2 O que recalcula sozinho</strong></h3>
+<p>Ao trocar qualquer um destes campos, <strong>todos os itens são recalculados</strong>:</p>
+<ul>
+  <li>"Tipo Operação NF";</li>
+  <li>natureza (o tipo de operação muda junto);</li>
+  <li>cliente;</li>
+  <li>data de entrega ou data do pedido;</li>
+  <li>frete e acréscimo (com as configurações da filial da parte 3.5).</li>
+</ul>
+<p><strong>O recálculo não muda o Vlr. Unit.</strong> Mudam o <strong>Vlr. Unit. com Tributos</strong>, o <strong>total do item</strong> e a divisão (ICMS, IBS/CBS e sem tributos).</p>
+<p><strong>Exemplo:</strong> no pedido de 5 unidades, trocar o cliente 60312 (Bahia, ICMS 7%) pelo 61576 (Minas Gerais, ICMS 12%):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">&nbsp;</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Cliente 60312 (7%)</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Cliente 61576 (12%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Vlr. Unit.</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Vlr. Unit. com Tributos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,91</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Total do IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5,89</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">5,58</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Total sem tributos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">589,21</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">557,23</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Total do item</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>639,90</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>639,55</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><br><strong>6.3 Avisos ao salvar</strong></h3>
+<p>Os avisos <strong>não impedem</strong> de salvar. Eles avisam que o IBS/CBS não vai ser calculado e que o total vai sair sem ele.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Aviso</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que fazer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">"O cálculo de impostos na venda está desligado..."</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Ligar a configuração da filial <code>CALCIMPOSTOVENDA</code> e fechar e abrir o sistema</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">"Pedido sem natureza de operação..."</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Informar a natureza. Se o campo não aparece, ligar a configuração da filial <code>INFNATPEDIDO</code></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">"Pedido sem tipo de operação da reforma..."</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Informar o "Tipo Operação NF" na aba Dados fiscais, ou preencher o "Cod. Tipo Operação" da natureza no Cadastro de Natureza de Operação</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><br><strong>6.4 Total do pedido, limite de crédito e parcelas</strong></h3>
+<p>O <strong>total do pedido</strong> é a soma dos itens com o IBS/CBS, mais o frete, menos o desconto. É esse total que vale para:</p>
+<ul>
+  <li>o <strong>limite de crédito</strong> do cliente: um pedido de 639,90 passa do limite de 635,00, mesmo com o preço de venda somando 634,00;</li>
+  <li>as <strong>parcelas</strong> da condição de pagamento: 2 parcelas de <strong>319,95</strong> no pedido de 639,90.</li>
+</ul>
+<h3><br><strong>6.5 Outros caminhos que criam pedido</strong></h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Caminho</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O que acontece</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Copiar e colar</strong> um pedido</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O novo vem com o mesmo tipo de operação e calcula pela data nova</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Abrir um pedido antigo</strong> e salvar um item</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O item passa a ter o Vlr. Unit. com Tributos, pela data dele, e <strong>o total do pedido sobe</strong>. Enquanto nenhum item for salvo, o pedido mostra o total de antes</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>App do representante</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Ver a parte 8</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><br><strong>6.6 Do pedido para a nota</strong></h3>
+<ul>
+  <li>O Vlr. Unit. da nota é o <strong>Vlr. Unit. com Tributos</strong> do pedido. <strong>O total da nota é igual ao total do pedido.</strong></li>
+  <li>Cada item da nota vai com o <strong>tipo de operação do pedido</strong>, mesmo que ele tenha sido trocado no pedido. A nota busca de novo o CST e a classificação desse tipo.<ul>
+      <li>Isso vale quando a nota está com a <strong>mesma natureza</strong> do pedido. Se for escolhida outra natureza na nota, vale o tipo de operação da natureza da nota.</li>
+      <li>Se a configuração de <strong>agrupar itens na nota</strong> estiver ligada, o mesmo produto, com o mesmo preço, vindo de duas faturas com tipos de operação diferentes, vira um item só, com o tipo da primeira.</li>
+    </ul>
+  </li>
+  <li>Na tela <strong>Fatura (FAT0010)</strong>, o total e o IBS/CBS do item são calculados pela <strong>quantidade faturada</strong>. A Fatura mostra as mesmas colunas do pedido.</li>
+  <li><strong>Pedido pendente</strong> (o que sobra ao faturar só uma parte) e <strong>faturamento parcial</strong>: o pedido novo leva a mesma natureza e o mesmo tipo de operação.</li>
+</ul>
+<p><strong>Exemplo</strong> (pedido de 5 unidades do 07919CJ, cliente 60312):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">&nbsp;</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit.</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Quantidade</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Total</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">IBS/CBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sem tributos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Nota do pedido inteiro</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">5</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>639,90</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">5,89</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">589,21</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Faturando só 2 unidades</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">2</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>255,96</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">2,36</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">235,69</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Pedido pendente (as outras 3)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">3</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>383,94</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">3,53</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">353,53</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Na nota do pedido inteiro: ICMS <strong>44,79</strong>, base do IBS/CBS <strong>589,22</strong>, CBS <strong>5,30</strong>, IBS <strong>0,59</strong> e <strong>total da nota 639,90</strong>. O IBS/CBS não soma de novo, porque já está dentro dos 127,98.</p>
+<hr>
+<h2><br><strong>7. Frente de caixa (PDV)</strong></h2>
+<p>Vale para a tela <strong>Frente de caixa (FAT0030)</strong>.</p>
+<h3><br><strong>7.1 Natureza e tipo de operação no PDV</strong></h3>
+<p>Na identificação do cliente há dois campos:</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Campo</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">De onde vem</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Pode trocar?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Natureza</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Da <strong>natureza da frente de caixa</strong> cadastrada na filial (<strong>Cadastro de filiais/empresas, CAD0019</strong>). <strong>Exemplo:</strong> natureza 51 "Venda NFe"</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Sim. Só aceita naturezas de venda, revenda, outras saídas e consumo</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Tipo da Operação</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Do "Cod. Tipo Operação" da natureza. <strong>Exemplo:</strong> 133</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Sim</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Com ENTER, a ordem é: <strong>Tabela de preço → Natureza → Tipo da Operação → Representante</strong>. Ao digitar um código que não existe, abre a pesquisa.</p>
+<blockquote>
+  <p>⚠️ <strong>Sem natureza ou sem tipo de operação, a venda do PDV sai sem IBS/CBS.</strong> Confira se a natureza da frente de caixa da filial tem o "Cod. Tipo Operação" preenchido.</p>
+</blockquote>
+<h3><br><strong>7.2 Valores na forma de pagamento</strong></h3>
+<p>Na tela da forma de pagamento aparecem:</p>
+<ul>
+  <li><strong>"Valor CBS + IBS"</strong>: o IBS/CBS da venda;</li>
+  <li><strong>"Valor sem tributos"</strong>: quanto a venda vale sem ICMS, sem IBS e sem CBS.</li>
+</ul>
+<p>O <strong>total a pagar</strong> é a soma do Vlr. Unit. com Tributos dos itens, com a mesma conta do pedido (parte 6).</p>
+<h3><br><strong>7.3 A nota do PDV</strong></h3>
+<p>A NFC-e (ou a NF-e) gerada pelo PDV recebe o <strong>Vlr. Unit. com Tributos</strong> de cada item. O <strong>total da nota é igual ao total pago</strong>.</p>
+<hr>
+<h2><br><strong>8. App do representante</strong></h2>
+<blockquote>
+  <p>👤 <strong>Esta parte depende de uma decisão</strong> sobre como o app vai tratar o IBS/CBS por fora. O texto abaixo será completado quando a decisão for tomada.</p>
+</blockquote>
+<ul>
+  <li>O app usa o <strong>"Preço"</strong> das tabelas de preço, que agora é o preço de venda <strong>sem o IBS/CBS</strong>.</li>
+  <li>Quando o pedido chega no ERP, o ERP soma o IBS/CBS por fora e grava os valores oficiais. <strong>O total do pedido no ERP fica maior que o total mostrado no app</strong>, pela diferença do IBS/CBS.</li>
+  <li>O pedido do app chega no ERP <strong>sem natureza</strong>: ele recebe a natureza padrão do cliente ou do estado, como um pedido digitado (parte 4, item 6). <strong>Sem natureza padrão, o pedido do app fica sem IBS/CBS.</strong></li>
+</ul>
+<hr>
+<h2><br><strong>9. Nota fiscal</strong></h2>
+<p>Vale para a tela <strong>Notas fiscais emitidas (NTF0020)</strong>.</p>
+<h3><strong>9.1 Nota gerada do pedido ou do PDV</strong></h3>
+<p>O Vlr. Unit. vem <strong>pronto</strong> do pedido (o Vlr. Unit. com Tributos). Não precisa fazer nada (parte 6.6).</p>
+<h3><strong>9.2 Nota digitada</strong></h3>
+<ol>
+  <li><strong>Informe a data de emissão, o cliente e a natureza antes de lançar os itens.</strong> O Vlr. Unit. com o IBS/CBS por fora é calculado <strong>quando o preço é buscado</strong> (ao lançar a quantidade do item ou ao trocar a tabela de preço), com a data, o ICMS e a alíquota daquele momento.</li>
+  <li>Lance os itens como hoje. O <strong>Vlr. Unit.</strong> vem do cadastro ou da tabela <strong>já com o IBS/CBS por fora</strong>.<ul>
+      <li><strong>Exemplo:</strong> 07919CJ, cliente 60312, natureza 02: o Vlr. Unit. vem <strong>127,98</strong> (126,80 + IBS/CBS), igual ao pedido.</li>
+      <li>Com data de emissão <strong>antes</strong> da <code>DTINICIOIBSCBSRT</code>, o Vlr. Unit. vem <strong>126,80</strong>.</li>
+    </ul>
+  </li>
+  <li><strong>Se mudar a data de emissão, o ICMS ou o CST depois de lançar o item, lance o item de novo.</strong> O Vlr. Unit. não é refeito sozinho.</li>
+  <li><strong>Salve o item</strong> e confira os campos <strong>"Vlr. Sem Tributos IBS/CBS"</strong> e <strong>"Vlr. Total Sem Tributos IBS/CBS"</strong> e o IBS/CBS.</li>
+  <li>Confira o <strong>"Vlr. Total Sem Tributos IBS/CBS"</strong> do cabeçalho: é a soma de todos os itens.</li>
+  <li>O <strong>total da nota não soma o IBS/CBS outra vez</strong> (ele já está dentro do Vlr. Unit.).</li>
+  <li><strong>PIS e COFINS:</strong> a partir da data da configuração da filial <code>DTINICIOIBSCBSRT</code>, a nota zera a base, a alíquota, o valor e a retenção do PIS e da COFINS. O CST vem do cadastro (parte 4.1).<ul>
+      <li>Vale para nota de saída e para nota de entrada com o cálculo automático ligado.</li>
+      <li>Com o cálculo automático <strong>desligado</strong>, os valores digitados ficam como estão.</li>
+    </ul>
+  </li>
+</ol>
+<p><strong>Nota de compra:</strong> o Vlr. Unit. é o custo, <strong>sem</strong> somar IBS/CBS.</p>
+<p><strong>Nota com data de 2026</strong> calcula como hoje, inclusive o PIS/COFINS.</p>
+<h3><br><strong>9.3 Devolução (finalidade 4)</strong></h3>
+<p><strong>Regra da Sefaz a partir de 03/11/2026, para todas as empresas (inclusive Simples Nacional):</strong> na nota de devolução, <strong>cada item</strong> tem que informar a nota de origem e o número do item nela.</p>
+<ol>
+  <li><strong>Cada item da devolução precisa da nota de origem e do item dela.</strong>
+    <ul>
+      <li>A devolução <strong>gerada pelo sistema</strong> já preenche.</li>
+      <li>Na devolução digitada, use o botão <strong>"Preencher referências"</strong>, junto dos botões da grade de itens da nota.</li>
+    </ul>
+  </li>
+  <li>A nota de origem aparece também na aba <strong>"Notas referenciadas"</strong> do cabeçalho.</li>
+  <li><strong>Antes de transmitir</strong>, o sistema avisa se algum item está sem a nota de origem ou se o mesmo item da nota de origem foi usado em dois itens da devolução.</li>
+  <li>A devolução usa o <strong>Vlr. Unit. da nota de origem</strong> (que já tem o IBS/CBS), sem somar o IBS/CBS de novo. <strong>Exemplo:</strong> devolução da venda de 127,98 sai com 127,98.</li>
+  <li>A devolução usa a <strong>data da nota de origem</strong> para os impostos e repete os impostos da venda (parte 11.6).</li>
+</ol>
+<p><strong>Devolução de compra:</strong> ao importar a nota do fornecedor, o sistema guarda o número de cada item do XML. Em nota de compra importada antes disso, o número do item pode estar vazio: informe-o na grade de itens antes de transmitir.</p>
+<hr>
+<h2><br><strong>10. Como conferir a conta</strong></h2>
+<p><strong>Conferência 1: o IBS/CBS foi somado por fora</strong> (item sem frete e sem desconto):</p>
+<pre><code class="language-plaintext">Total do item − IBS/CBS = Preço de venda × Quantidade
+</code></pre>
+<p><strong>Exemplo:</strong> 639,90 − 5,89 = <strong>634,01</strong>, e 126,80 × 5 = <strong>634,00</strong> ✔ (1 centavo de arredondamento)</p>
+<p><strong>Conferência 2: a divisão do total:</strong></p>
+<pre><code class="language-plaintext">Sem tributos + ICMS + IBS/CBS = Total do item
+</code></pre>
+<p><strong>Exemplo:</strong> 589,21 + 44,79 + 5,89 = <strong>639,89</strong>, e o total do item é <strong>639,90</strong> ✔ (1 centavo de arredondamento)</p>
+<p><strong>Conferência 3:</strong> o <strong>Vlr. Unit.</strong> do item tem que ser <strong>igual ao da tabela de preço</strong> (ou ao digitado). O sistema não muda o Vlr. Unit.: ele calcula o Vlr. Unit. com Tributos ao lado.</p>
+<p>Diferença de <strong>até 1 centavo</strong> é arredondamento. Se a diferença for maior, anote o número do pedido ou da nota e fale com o suporte.</p>
+<hr>
+<h2><br><strong>11. Dúvidas comuns</strong></h2>
+<h3><br><strong>11.1 Como fica o desconto?</strong></h3>
+<p>O desconto é dado sobre o preço de venda e passa para o valor com tributos <strong>na mesma proporção</strong>. <strong>O "Total sem tributos" é calculado sobre o preço antes do desconto</strong>, igual ao que vai na nota. Ele só muda quando o <strong>próprio Vlr. Unit.</strong> muda.</p>
+<p><strong>Exemplo:</strong> 5 unidades do 07919CJ (126,80), cliente 60312, com 10% de desconto.</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Onde deu o desconto</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit.</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Vlr. Unit. com Tributos</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Desconto aparece?</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">IBS/CBS</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Sem tributos</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Cliente paga</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Sem desconto</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">—</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">5,89</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">589,21</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">639,90</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">No item, com a configuração da filial <code>DESCVLRUNIT</code> = <strong>Sim</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>114,12</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>115,18</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">não</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>5,30</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>530,28</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">575,90</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">No item, com a configuração da filial <code>DESCVLRUNIT</code> = <strong>Não</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">sim, 10%</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>5,30</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">589,21</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">575,91</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">No rodapé (desconto geral)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">126,80</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">127,98</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">sim, 10%</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>5,30</strong></td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">589,21</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">575,91</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>Com desconto, o IBS/CBS é 5,30 nos três casos.</strong> Muda só a forma de mostrar, e pode haver 1 centavo de diferença no total. O desconto geral do rodapé sempre aparece para o cliente.</p>
+<p>Na nota, o desconto do item aparece como <strong>63,99</strong> (os 10% sobre 639,90).</p>
+<h3><br><strong>11.2 O IBS/CBS ficou vazio no pedido</strong></h3>
+<p>Confira, nesta ordem:</p>
+<ol>
+  <li>A configuração da filial <code>CALCIMPOSTOVENDA</code> está Sim (e o sistema foi fechado e aberto)?</li>
+  <li>O pedido tem <strong>natureza de operação</strong>?</li>
+  <li>Tem <strong>"Tipo Operação NF"</strong> na aba Dados fiscais?</li>
+  <li>A data de entrega (ou do pedido) é <strong>igual ou depois</strong> da data da configuração da filial <code>DTINICIOIBSCBSRT</code>?</li>
+  <li>Existe <strong>alíquota</strong> com vigência nessa data (Configurações de regras da tributação fiscal, CAD0231)?</li>
+  <li>O CST do item tem o campo <strong>"IBS/CBS"</strong> marcado (Cadastro de CST do IBS/CBS, CAD0228)?</li>
+</ol>
+<p>Com o IBS/CBS vazio, o Vlr. Unit. com Tributos fica igual ao Vlr. Unit., e o total sai sem IBS/CBS.</p>
+<h3><br><strong>11.3 O pedido e a nota deram impostos diferentes</strong></h3>
+<p><br><strong>O Vlr. Unit. da nota tem que ser igual ao Vlr. Unit. com Tributos do pedido</strong>, e o total tem que ser o mesmo. O que pode mudar é a divisão (ICMS, IBS/CBS e sem tributos):</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Motivo</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Normal?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Endereço mudado na nota.</strong> O pedido usa o endereço do Cadastro de Clientes</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">Sim</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Frete informado só na nota</strong>, ou configuração da filial <code>DESPESASFRETENOPEDIDO</code> = Não</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Sim</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Antes da data da configuração da filial </strong><code><strong>DTINICIOIBSCBSRT</strong></code>, a nota ainda calcula o PIS/COFINS e tira da conta do IBS/CBS, e o pedido não</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Sim. A partir da data os valores batem</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A natureza da nota é diferente da do pedido</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Sim. A nota usa o tipo de operação da natureza dela</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Consumidor final de outro estado</strong> (parte 11.8)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Sim: diferença pequena no IBS/CBS</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>O Vlr. Unit. da nota ficou diferente do Vlr. Unit. com Tributos do pedido</strong>, ou nenhum dos motivos acima</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;"><strong>Não.</strong> Fale com o suporte, com o número do pedido e da nota</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><br><strong>11.4 Troquei o cliente de estado e o total mudou um pouco</strong></h3>
+<p><br><strong>Está certo.</strong> O Vlr. Unit. não muda, mas o IBS/CBS é calculado depois de tirar o ICMS. Com outro ICMS, o IBS/CBS muda, e o total muda junto: <strong>639,90</strong> com ICMS 7% e <strong>639,55</strong> com ICMS 12% (parte 6.2). Para a margem acompanhar o ICMS, use a tabela da alíquota de ICMS da venda (parte 5.3).</p>
+<h3><br><strong>11.5 A nota de 2027 saiu com o PIS/COFINS zerado, mas com o CST antigo</strong></h3>
+<p><strong>O cálculo está certo.</strong> O sistema zera os valores, mas o CST vem do cadastro (CFOP, natureza ou classificação fiscal). 👤 Com o contador, ajuste o CST no <strong>Cadastro de Natureza de Operação (NTF0002)</strong> e marque "Forçar o cálculo de PIS/COFINS na nota" (parte 4.1).</p>
+<h3><br><strong>11.6 Devolução: os impostos não são os de hoje</strong></h3>
+<p><strong>Está certo.</strong> Na devolução (finalidade 4), o sistema usa a data da <strong>nota de origem</strong>. A devolução repete a regra da venda: as mesmas alíquotas de IBS/CBS e, se a venda foi de 2026, o PIS/COFINS da venda.</p>
+<p>Como o sistema acha a data:</p>
+<ol>
+  <li>Olha a aba <strong>"Notas referenciadas"</strong> do cabeçalho da nota.</li>
+  <li>Usa a data de emissão da nota referenciada. Se for nota de outra empresa, sem data, usa o ano e o mês da chave.</li>
+  <li>Com mais de uma nota referenciada, usa a mais antiga.</li>
+  <li>Sem nota referenciada, usa a data da devolução.</li>
+</ol>
+<h3><br><strong>11.7 A nota de 2027 ainda calculou PIS/COFINS</strong></h3>
+<p>Confira:</p>
+<ol>
+  <li>A data de emissão é <strong>igual ou depois</strong> da data da configuração da filial <code>DTINICIOIBSCBSRT</code>?</li>
+  <li>A configuração da filial <code>DTINICIORT</code> está preenchida? No <strong>Simples Nacional</strong>, com ela vazia, nada muda.</li>
+  <li>O cálculo automático de impostos da nota está <strong>ligado</strong>?</li>
+  <li>É uma <strong>devolução</strong> de venda de antes da <code>DTINICIOIBSCBSRT</code>? Então o PIS/COFINS da venda se repete, e está certo (parte 11.6).</li>
+</ol>
+<h3><br><strong>11.8 Venda para consumidor final de outro estado</strong></h3>
+<p>Vale para cliente <strong>sem inscrição estadual</strong> de outro estado. 👤 Confirme com o contador como a sua empresa trata essas vendas.</p>
+<ul>
+  <li><strong>ICMS da nota:</strong> alíquota interestadual, igual à venda para empresa daquele estado.</li>
+  <li><strong>Diferencial de alíquota (DIFAL):</strong> a empresa recolhe para o estado do cliente a diferença até a alíquota interna de lá. Esse valor <strong>não soma no total da nota</strong>: o cliente paga o mesmo, e a empresa fica com menos.</li>
+  <li><strong>IBS/CBS:</strong> na nota, o DIFAL também sai da conta do IBS/CBS. Por isso o IBS/CBS do pedido pode ficar alguns centavos diferente do da nota. <strong>O total do cliente é o mesmo.</strong></li>
+</ul>
+<h3><br><strong>11.9 A Sefaz rejeitou a nota por causa do cadastro do cliente</strong></h3>
+<p>A Sefaz confere o cadastro do cliente com o cadastro nacional: CNPJ, inscrição estadual e inscrição do local de entrega e de retirada. Corrija o <strong>Cadastro de Clientes (CAD0014)</strong> e transmita de novo.</p>
+<h3><br><strong>11.10 A nota calculou o IBS/CBS, mas o XML saiu sem ele</strong></h3>
+<p>Confira a configuração da filial <code>ALIMENTARXMLRT</code>: tem que estar <strong>S</strong>. Em N, o sistema calcula, mas não envia nada do IBS/CBS no arquivo da nota.</p>
+<h3><br><strong>11.11 Abri um pedido antigo, salvei um item e o total subiu</strong></h3>
+<p><strong>Está certo.</strong> O pedido foi gravado antes do IBS/CBS por fora. Ao salvar o item, ele passa a ter o Vlr. Unit. com Tributos, e o total soma o IBS/CBS (parte 6.5). Se o pedido já foi combinado com o cliente pelo valor antigo, confira antes de faturar.</p>
+<h3><br><strong>11.12 Preciso zerar o PIS/COFINS no cadastro para 2027?</strong></h3>
+<p><strong>Não. O sistema zera sozinho</strong> a partir da data da configuração da filial <code>DTINICIOIBSCBSRT</code> (01/01/2027). Antes dessa data, tudo continua como hoje.</p>
+<p><strong>Não zere as alíquotas de PIS/COFINS nos cadastros</strong> (classificação fiscal, natureza, CFOP):</p>
+<ul>
+  <li>as notas de 2026 sairiam erradas;</li>
+  <li>a devolução em 2027 de uma venda de 2026 precisa repetir o PIS/COFINS da venda (parte 11.6).</li>
+</ul>
+<p><strong>O único ajuste é o CST</strong>, com o contador (parte 4.1). O pedido não calcula PIS/COFINS, então nada muda nele.</p>
+<h3><br><strong>11.13 Mudei a configuração e nada mudou</strong></h3>
+<p><strong>Feche e abra o sistema</strong> (parte 3).</p>
+<h3><br><strong>11.14 A tabela mostra um "Vlr. com Tributos" e o pedido mostrou outro valor</strong></h3>
+<p>É normal ter alguns centavos de diferença: a tabela faz uma estimativa, e o pedido faz a conta da nota (parte 5.7). <strong>O que vale é o valor do pedido.</strong> Não grave o "Vlr. com Tributos" no "Preço" da tabela.</p>
+<h3><br><strong>11.15 Salvei uma tabela gerada pela Formação do preço e o fator mudou</strong></h3>
+<p>Acontece quando a configuração da filial <code>CALCULARFATORTABPRECO</code> está <strong>Sim</strong>. A tabela gerada leva o <strong>ICMS</strong> no cabeçalho, e o fator é recalculado com ele ao salvar. <strong>Exemplo:</strong> com ICMS 18, o fator passa de 1 para <strong>1,2195</strong>.</p>
+<ul>
+  <li>Os <strong>itens da tabela não mudam</strong>: o preço deles já está gravado.</li>
+  <li>Os <strong>produtos que não estão na tabela</strong> passam a sair no pedido com o preço do cadastro × o novo fator.</li>
+</ul>
+<p>Antes de salvar, confira os percentuais da aba "Cálculo do fator sobre o preço". Se essa tabela não deve ter fator, fale com o suporte.</p>
+<h3><br><strong>11.16 As colunas de IBS, CBS e IS estão vazias na tabela de preço</strong></h3>
+<p>Confira:</p>
+<ol>
+  <li>O <strong>Destino</strong> da tabela é <strong>Venda</strong>? Na tabela de compra as colunas ficam vazias.</li>
+  <li>É uma tabela antiga? Os itens só são calculados quando o preço muda ou quando os percentuais do cabeçalho são salvos (parte 5.6).</li>
+</ol>
+<h3><br><strong>11.17 Na tabela gerada, alguns tamanhos ficaram com preço diferente</strong></h3>
+<p><strong>Está certo.</strong> O produto tem preços próprios por cor ou tamanho no <strong>Cadastro de produtos (CAD0030)</strong>, aba <strong>Preços</strong> → <strong>Diferenciais de preços</strong>. A tabela reajusta esses preços na mesma proporção do preço sugerido (parte 5.5).</p>
+<h3><br><strong>11.18 A coluna do IS está sempre zerada</strong></h3>
+<p><strong>Está certo, por enquanto.</strong> O IS só vale para alguns produtos, com alíquotas próprias, e essas alíquotas ainda não estão no sistema. No Cadastro de Tabelas de Preços, com a configuração da filial <code>CALCULARFATORTABPRECO</code> = Sim, dá para informar um <strong>% IS</strong> para a tabela inteira. 👤 Use só com orientação do contador.</p>
+<h3><br><strong>11.19 Empresa do Simples Nacional: muda alguma coisa?</strong></h3>
+<p><strong>Por enquanto, não.</strong> Com a configuração da filial <code>DTINICIORT</code> vazia, o pedido, o PDV e a nota funcionam como hoje: o Vlr. Unit. com Tributos fica igual ao Vlr. Unit., e o total não soma IBS/CBS.</p>
+<hr>
+<h2><br><strong>12. Como começar: lista passo a passo</strong></h2>
+<p>Siga nesta ordem. Onde aparecer o 👤, faça com o contador.</p>
+<ol>
+  <li>Na tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>, aba <strong>Configurações adicionais</strong>, confira as configurações da filial da parte 3.</li>
+  <li><strong>Configuração da filial </strong><code><strong>DTINICIORT</strong></code><strong>:</strong> preenchida no regime normal; <strong>vazia no Simples Nacional</strong>. 👤</li>
+  <li><strong>Configuração da filial </strong><code><strong>DTINICIOIBSCBSRT</strong></code><strong>:</strong> 01/01/2027.</li>
+  <li><strong>Configuração da filial </strong><code><strong>ALIMENTARXMLRT</strong></code><strong>:</strong> S.</li>
+  <li><strong>Configuração da filial </strong><code><strong>ICMSSOBREIBSCBS</strong></code><strong>:</strong> Sim, a não ser com decisão judicial. 👤 O campo <strong>"IBS/CBS compõe base do ICMS"</strong> do <strong>Cadastro de Estados (CAD0005)</strong> fica vazio.</li>
+  <li><strong>Configurações da filial </strong><code><strong>CALCIMPOSTOVENDA</strong></code><strong> e </strong><code><strong>INFNATPEDIDO</strong></code><strong>:</strong> Sim.</li>
+  <li><strong>Cadastros da parte 4</strong> 👤: CST (CAD0228), classificação tributária (CAD0229), alíquotas (CAD0231), tipos de operação (CAD0230), "Cod. Tipo Operação" em cada natureza (NTF0002), natureza padrão dos clientes (CAD0014) ou dos estados (CAD0005), endereço e inscrição estadual dos clientes (CAD0014).</li>
+  <li><strong>Natureza da frente de caixa</strong> (CAD0019): confira se ela tem o "Cod. Tipo Operação" preenchido (parte 7).</li>
+  <li><strong>Regra do preço (parte 2):</strong> o "Preço" de cada tabela é o preço de venda <strong>com ICMS e sem IBS/CBS</strong>. Confira se nenhuma tabela tem o IBS/CBS dentro do preço.</li>
+  <li><strong>Preços:</strong> confira as <strong>alíquotas padrão</strong> na tela <strong>Configurações de regras da tributação fiscal (CAD0231)</strong>, aba <strong>Padrão</strong> 👤. Depois monte os preços na <strong>Formação do preço de venda (ADM0011)</strong> e crie as <strong>tabelas de preço por alíquota de ICMS</strong> (parte 5).</li>
+  <li><strong>Vendedores e caixas:</strong> no pedido e no PDV, a <strong>natureza</strong> e o <strong>tipo de operação</strong> precisam estar preenchidos (partes 6 e 7). Explique que o total passa a ser o preço + IBS/CBS.</li>
+  <li><strong>Pedidos em aberto:</strong> confira os pedidos já combinados com o cliente que vão ser faturados em 2027. O total deles sobe quando o IBS/CBS entra (partes 3.1 e 11.11).</li>
+  <li><strong>Alíquotas de 2027</strong> 👤: cadastre na tela <strong>Configurações de regras da tributação fiscal (CAD0231)</strong> quando saírem (CBS até 15/12/2026), com vigência a partir de 01/01/2027.</li>
+  <li><strong>CST do PIS/COFINS de 2027</strong> 👤: na virada do ano, no <strong>Cadastro de Natureza de Operação (NTF0002)</strong> (parte 4.1).</li>
+  <li><strong>IPI de 2027</strong> 👤: com o contador, revise o IPI no <strong>Cadastro de classificações fiscais (CAD0027)</strong>.</li>
+  <li><strong>Feche e abra o sistema.</strong></li>
+  <li><strong>Devolução:</strong> faça uma devolução de teste e confira se todos os itens saem com a nota de origem (parte 9.3).</li>
+  <li><strong>Primeiro pedido de 2027:</strong> faça as conferências da parte 10 em um item. Confira se o Vlr. Unit. é o da tabela, se a nota saiu com o Vlr. Unit. com Tributos do pedido e se o PIS/COFINS saiu zerado com o CST certo.</li>
+</ol>
+<hr>
+<p><i>Este material é atualizado conforme as regras da reforma mudam.</i></p>
+<hr>
+<h2><strong>Para revisão (apagar antes de publicar)</strong></h2>
+<p><br>O texto acima descreve o comportamento <strong>certo</strong>, pela regra de 27/10/2026. Nestes pontos ele depende de correção no código ou de decisão. Detalhes em <code>V:\Reforma Tributaria\Revisao 15980 - analise e o que falta na Ajuda.md</code>, seção 2.</p>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Parte</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">O texto supõe</th>
+        <th style="border-bottom:1px solid rgba(255, 255, 255, 0.69);border-left:rgba(255, 255, 255, 0.69);border-right:rgba(255, 255, 255, 0.69);border-top:rgba(255, 255, 255, 0.69);padding:5px 10px;">Hoje (rev 15980)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">6.1 (serviço) e 6.6</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O total do serviço no pedido é 50,50</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:rgba(255, 255, 255, 0.18);padding:5px 10px;">O pedido mostra 50,00, e a nota sai com 50,50 (achado 3)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">6.6 (Fatura)</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A Fatura mostra o total com IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A Fatura mostra 634,00, e a nota sai com 639,90 (achados 1 e 2)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">6</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A Supervisão de pedidos (FAT0062) mostra o total com IBS/CBS</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Mostra 634,00 (achado 4)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">6.1 ("não é digitado")</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A coluna Vlr. Unit. com Tributos é somente leitura</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Ela aceita digitação (achado 12)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">7.1</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O código da natureza digitado no PDV é aceito direto</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A pesquisa abre sempre (achado 6); texto no Tipo da Operação pode dar erro de banco (achado 13)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">7.3</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A nota do PDV usa a natureza escolhida no PDV</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A nota usa a natureza da configuração da filial (achado 5); o comprovante imprime o Vlr. Unit. sem IBS/CBS (achado 8)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">7.1</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O nome do campo da filial é "natureza da frente de caixa"</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Conferir o rótulo na CAD0019 (campo <code>SIS0007.CODNATUREZAECF</code>; a NFC-e usa <code>CODNATUREZANFCE</code>)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">8</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Texto provisório</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Decidir como o app trata o IBS/CBS por fora</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">9.2, item 3</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">"Lance o item de novo" é a orientação</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Se o achado 9 for corrigido, trocar por "o Vlr. Unit. é refeito sozinho"</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">10</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Diferença de até 1 centavo</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Em quantidade alta passa disso: 1000 unidades dão 1,57 a mais (achado 10)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">4.2</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">CST 51 tem ICMS no pedido e na nota</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Pedido e nota decidem a redução de jeitos diferentes (achado 11)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">6.5 e 11.11</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">O total do pedido antigo sobe ao salvar um item</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Confirmar se é o desejado</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Não citado</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Impressão do pedido</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">A impressão calcula sem IBS/CBS (achado 7)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Não citado</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Comissão</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Confirmar se a base é com ou sem IBS/CBS</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Exemplos</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">Natureza 02 com o tipo 133 e <code>INFNATPEDIDO</code> = S</td>
+        <td style="border-bottom:rgba(255, 255, 255, 0.18);border-left:rgba(255, 255, 255, 0.18);border-right:rgba(255, 255, 255, 0.18);border-top:1px solid rgba(255, 255, 255, 0.18);padding:5px 10px;">No LOOK a natureza 02 está sem tipo e o <code>INFNATPEDIDO</code> está N; ajustar antes de reproduzir</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><br><br><br><br><br><br><br><br><br>&nbsp;</p>
