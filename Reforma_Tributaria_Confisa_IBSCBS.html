@@ -2,7 +2,7 @@
 title: Reforma Tributária no Confisa (IBS e CBS)
 description: 
 published: true
-date: 2026-10-29T16:39:58.075Z
+date: 2026-10-29T16:59:21.908Z
 tags: 
 editor: ckeditor
 dateCreated: 2026-10-29T16:20:36.985Z
@@ -301,13 +301,13 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p><strong>Figura 5: Regras de cálculo de valor unitário na reforma tributária nos módulos do Confisa ERP.</strong><br><br><br><strong>Por que assim:</strong></p>
+<p><strong>Figura 5: Regras de cálculo de valor unitário na reforma tributária </strong>nos módulos do<strong> Confisa ERP.</strong><br><br><br><strong>Por que assim:</strong></p>
 <ul>
   <li><strong>A empresa recebe o preço que definiu.</strong> O <strong>IBS/CBS é do governo</strong> e vai por fora, sem tirar da margem.</li>
   <li><strong>O ICMS continua dentro do preço</strong>, como sempre esteve.</li>
   <li><strong>A Sefaz pede o IBS/CBS dentro do valor do produto na nota.</strong> O sistema leva o valor com tributos para a nota, e a conta fecha.</li>
 </ul>
-<p><strong>Exemplo:</strong> o mesmo produto 07919CJ (126,80), 1 unidade, vendido com ICMS diferente:</p>
+<p><br><strong>Exemplo:</strong> o mesmo produto 07919CJ (126,80), 1 unidade, vendido com ICMS diferente:</p>
 <figure class="table">
   <table>
     <thead>
@@ -340,20 +340,20 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p>O IBS/CBS é calculado <strong>depois de tirar o ICMS</strong>. Com ICMS maior, a base do IBS/CBS fica menor, e o cliente paga um pouco menos. <strong>Em todas as vendas, o preço de venda menos o IBS/CBS dá 126,80.</strong></p>
+<p><strong>Figura 6:</strong> Exemplo de cálculo em estados diferentes.<br><br><br>O<strong> IBS/CBS</strong> é calculado <strong>depois de tirar o ICMS</strong>. Com <strong>ICMS maior</strong>, a <strong>base do IBS/CBS fica menor</strong>, e o cliente paga um pouco menos. <strong>Em todas as vendas, o preço de venda menos o IBS/CBS dá R$ 126,80.</strong></p>
 <blockquote>
-  <p>⚠️ <strong>Não coloque o IBS/CBS dentro do preço da tabela.</strong> O sistema vai somar o IBS/CBS outra vez por fora, e o cliente paga o imposto duas vezes.</p>
+  <p>⚠️ <strong>Não coloque o IBS/CBS dentro do preço da tabela no valor unitário.</strong> Dessa forma o sistema vai somar o IBS/CBS outra vez por fora, e o cliente paga o imposto duas vezes.</p>
 </blockquote>
 <blockquote>
   <p>ℹ️ <strong>O total da venda muda quando a alíquota do IBS/CBS muda.</strong> Se a alíquota subir em 2027, o mesmo preço de venda vai dar um total maior para o cliente. A margem da empresa fica a mesma.</p>
 </blockquote>
 <hr>
-<h2><br><strong>3. Configurações da filial</strong></h2>
-<p>As configurações desta parte ficam na tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>, aba <strong>Configurações adicionais</strong>. Cada uma vale só para a filial em que foi preenchida.</p>
+<h2><strong>3. Configurações da filial</strong></h2>
+<p><br>Para atender às novas regras da reforma quando elas entrarem em vigor, algumas configurações foram desenvolvidas. Elas podem ser localizadas no módulo ‘<strong>Cadastro de filiais/empresas (CAD0019)’</strong>, aba ‘<strong>Configurações adicionais\Diversas’</strong>. Para cada filial, é preciso alterar as configurações novamente.</p>
 <blockquote>
-  <p>⚠️ <strong>Depois de mudar uma configuração da filial, feche e abra o sistema.</strong> As telas só leem as configurações quando são abertas.</p>
+  <p>⚠️ <strong>Depois de mudar uma configuração da filial, feche e abra o sistema.</strong> Dessa forma as configurações começam a surtir efeito.</p>
 </blockquote>
-<h3><strong>3.1 As que ligam a reforma</strong></h3>
+<h3><br><strong>3.1 As que ligam a reforma</strong></h3>
 <figure class="table">
   <table>
     <thead>
@@ -382,8 +382,8 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p>Também conta o campo <strong>"Código CRT"</strong> da tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>: em 2026, só o regime normal (CRT 3) calcula a reforma. 👤 O contador confirma o regime da empresa.</p>
-<p><strong>Exemplo</strong> (5 unidades do 07919CJ para o cliente 60312, com <code>DTINICIOIBSCBSRT</code> = 01/01/2027):</p>
+<p><strong>Figura 7:</strong> Novas configurações da Reforma tributária.<br><br><br>Também conta o campo <strong>"Código CRT"</strong> da tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>: em <strong>2026</strong>, só o <strong>regime normal (CRT 3)</strong> calcula a reforma.<br>👤 O contador confirma o regime da empresa.</p>
+<p><strong>Exemplo</strong> (5 unidades do 07919CJ para o cliente 60312, com <code>DTINICIOIBSCBSRT</code> = <strong>01/01/2027</strong>):</p>
 <figure class="table">
   <table>
     <thead>
@@ -440,8 +440,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<h3><br><strong>3.3 IBS/CBS na base do ICMS: configuração da filial </strong><code><strong>ICMSSOBREIBSCBS</strong></code></h3>
-<p>Diz se o ICMS é cobrado <strong>em cima</strong> do IBS/CBS, que fica dentro do valor do produto na nota.</p>
+<p><strong>Figura 8:</strong> Configurações para ativar cálculo da reforma tributária.<br><br><br><strong>3.3 IBS/CBS na base do ICMS: configuração da filial </strong><code><strong>ICMSSOBREIBSCBS</strong></code><br><br><br>Diz se o ICMS é cobrado <strong>em cima</strong> do IBS/CBS, que fica dentro do valor do produto na nota.</p>
 <p>👤 <strong>Decisão do contador</strong> (e do advogado, quando houver ação judicial).</p>
 <figure class="table">
   <table>
@@ -466,7 +465,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p>Na tela <strong>Cadastro de Estados (CAD0005)</strong> existe o campo <strong>"IBS/CBS compõe base do ICMS"</strong>:</p>
+<h3><strong>Figura 9:</strong> Efeitos de cálculo de ICMS, IBS/CBS na reforma tributária.<br><br><br><strong>Configuração por Estado.</strong><br><br>Na tela <strong>Cadastro de Estados (CAD0005)</strong> existe o campo <strong>"IBS/CBS compõe base do ICMS"</strong>:</h3>
 <ul>
   <li><strong>Vazio:</strong> vale a configuração da filial <code>ICMSSOBREIBSCBS</code>.</li>
   <li><strong>Preenchido:</strong> vale no lugar da configuração da filial, para <strong>todas as filiais</strong> naquele estado. Use só se for regra do estado. 👤</li>
@@ -510,9 +509,9 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p><br>Com <strong>Não</strong>, só o ICMS normal muda. A substituição tributária e o diferencial de alíquota continuam sobre o valor cheio.</p>
+<p><strong>Figura 10:</strong> Cálculos de valores unitários conforme método de soma do ICMS.<br><br><br>Com <strong>Não</strong>, só o ICMS normal muda. A substituição tributária e o diferencial de alíquota continuam sobre o valor cheio.</p>
 <h3><br><strong>3.4 Desconto no preço unitário: configuração da filial </strong><code><strong>DESCVLRUNIT</strong></code></h3>
-<p>Muda <strong>onde o desconto do item aparece</strong>. <strong>O IBS/CBS é o mesmo nos dois casos.</strong></p>
+<p><br>Muda <strong>onde o desconto do item aparece</strong>. <strong>O IBS/CBS é o mesmo nos dois casos.</strong></p>
 <figure class="table">
   <table>
     <thead>
@@ -533,7 +532,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p><br>Exemplo completo na parte 11.1.</p>
+<p><strong>Figura 11:</strong> Desconto no produto conforme configuração de valor unitário.&nbsp;<br><br><br><strong>Exemplo completo na parte 11.1.</strong></p>
 <h3><br><strong>3.5 Frete e acréscimo no pedido</strong></h3>
 <figure class="table">
   <table>
@@ -555,9 +554,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p>O frete e o acréscimo são <strong>divididos entre os itens pela quantidade</strong>, igual à nota.</p>
-<p><strong>Diferente do produto:</strong> o IBS/CBS do frete fica <strong>dentro do valor do frete</strong>, sem somar por fora. O frete aumenta o IBS/CBS do item, mas não muda o Vlr. Unit. com Tributos.</p>
-<p><strong>Exemplo</strong> (5 unidades do 07919CJ, cliente 60312, frete de 5,00):</p>
+<p><strong>Figura 12:</strong> Configuração de frete e acréscimo na fatura nos valores da reforma tributária.<br><br><br>O frete e o acréscimo são <strong>divididos entre os itens pela quantidade</strong>, igual à nota.<br><br><strong>Diferente do produto:</strong> o IBS/CBS do frete fica <strong>dentro do valor do frete</strong>, sem somar por fora. O frete aumenta o IBS/CBS do item, mas não muda o Vlr. Unit. com Tributos.<br><br><strong>Exemplo</strong> (5 unidades do 07919CJ, cliente 60312, frete de 5,00):</p>
 <figure class="table">
   <table>
     <thead>
@@ -591,8 +588,9 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
+<p><strong>Figura 13:</strong> Cálculo de frete na reforma tributária.</p>
 <hr>
-<h2><br><strong>4. Cadastros que precisam estar certos</strong></h2>
+<h2><strong>4. Cadastros que precisam estar certos</strong></h2>
 <p>Faça nesta ordem, junto com o contador. Sem estes cadastros o sistema <strong>não calcula</strong> o IBS/CBS e também não mostra erro: os campos ficam vazios, e o total sai sem o IBS/CBS.</p>
 <figure class="table">
   <table>
@@ -657,22 +655,20 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<h3><br><br><strong>4.1 CST do PIS/COFINS a partir de 2027 👤</strong></h3>
-<p>A partir da data da configuração da filial <code>DTINICIOIBSCBSRT</code> (01/01/2027), a nota <strong>zera sozinha</strong> o PIS e a COFINS: base, alíquota, valor e retenção. Mas a Sefaz <strong>continua exigindo</strong> o PIS e a COFINS em todo item, com um CST. <strong>O sistema não escolhe esse CST:</strong> ele continua vindo do cadastro, como hoje.</p>
-<p>De onde o CST vem (vale o primeiro preenchido):</p>
+<p><strong>Figura 14:</strong> Módulos que precisam ser configurados para a reforma tributária.<br><br><br><strong>4.1 CST do PIS/COFINS a partir de 2027 👤</strong></p>
+<p>A partir da data da configuração da filial <code>DTINICIOIBSCBSRT</code> (01/01/2027), a nota <strong>zera os valores </strong>o PIS e a COFINS <strong>sozinha</strong>: base, alíquota, valor e retenção. Mas a Sefaz <strong>continua exigindo</strong> o PIS e a COFINS em todo item, com um CST. <strong>O sistema usará o CST indicado pelo contador:</strong> ele continua vindo dos cadastros como hoje.<br><br>De onde o <strong>CST </strong>vem (vale o primeiro preenchido):</p>
 <ol>
-  <li>cadastro de <strong>CFOP</strong>;</li>
+  <li>Cadastro de <strong>CFOP</strong>;</li>
   <li><strong>Cadastro de Natureza de Operação (NTF0002)</strong>;</li>
   <li><strong>Cadastro de classificações fiscais (CAD0027)</strong>.</li>
+  <li><strong>Cadastro de Produtos/Serviços(CAD0030/CAD0047).</strong></li>
 </ol>
-<p>Se a natureza tiver marcado o campo <strong>"Forçar o cálculo de PIS/COFINS na nota"</strong> (Cadastro de Natureza de Operação), vale o CST da natureza, no lugar dos outros.</p>
-<p><strong>Na virada do ano, com o contador:</strong> no <strong>Cadastro de Natureza de Operação (NTF0002)</strong>, em cada natureza de venda, informar o CST do PIS e da COFINS que o contador indicar e marcar <strong>"Forçar o cálculo de PIS/COFINS na nota"</strong>.</p>
+<p><br>Se a natureza tiver marcado o campo <strong>"Forçar o cálculo de PIS/COFINS na nota"</strong> (Cadastro de Natureza de Operação), vale o <strong>CST </strong>da <strong>natureza, ignorando </strong>o que foi configurado nos outros cadastros.<br><br><strong>Na virada do ano, com o contador:</strong> no <strong>Cadastro de Natureza de Operação (NTF0002)</strong>, em cada natureza de venda, informar o <strong>CST</strong> do <strong>PIS</strong> e do <strong>COFINS</strong> que o <strong>contador indicar</strong> e marcar <strong>"Forçar o cálculo de PIS/COFINS na nota"</strong> caso necessário.</p>
 <ul>
-  <li>A natureza usada para <strong>devolver vendas de 2026</strong> fica com o CST antigo.</li>
-  <li>Se nada for feito, a nota sai com os valores zerados, mas com o CST de antes.</li>
+  <li>A natureza usada para <strong>devolver vendas de 2026</strong> fica com o <strong>CST antigo</strong>.</li>
+  <li>Se nada for feito, <strong>a nota sai com os valores zerados</strong>, mas com o <strong>CST de antes</strong>.<br>&nbsp;</li>
 </ul>
-<h3><strong>4.2 O ICMS que entra na conta do IBS/CBS</strong></h3>
-<p>O IBS/CBS é calculado depois de tirar o ICMS. Por isso o ICMS do item precisa estar certo <strong>já no pedido</strong>. O pedido usa o mesmo ICMS que a nota vai usar, com estas regras:</p>
+<p><strong>4.2 O ICMS que entra na conta do IBS/CBS</strong><br><br>O <strong>IBS/CBS</strong> é calculado depois de tirar o <strong>ICMS</strong>. Por isso o ICMS do item precisa estar certo <strong>já no pedido</strong>. O pedido usa o mesmo ICMS que a nota vai usar, com estas regras:</p>
 <figure class="table">
   <table>
     <thead>
@@ -705,11 +701,11 @@ dateCreated: 2026-10-29T16:20:36.985Z
     </tbody>
   </table>
 </figure>
-<p><strong>Como o sistema chega no imposto:</strong></p>
+<p><strong>Figura 15:</strong> Regras para cálculo de ICMS na reforma tributária.<br><br><br><strong>Como o sistema chega no imposto:</strong></p>
 <pre><code class="language-plaintext">Natureza → Tipo de operação → CST e classificação → Alíquota (pela data) → Imposto
 </code></pre>
 <hr>
-<h2><br><strong>5. Formação do preço de venda e tabela de preço</strong></h2>
+<h2><br><br><strong>5. Formação do preço de venda e tabela de preço</strong></h2>
 <blockquote>
   <p>ℹ️ Se a sua tela <strong>Formação do preço de venda (ADM0011)</strong> ainda não mostra os campos de IBS, CBS e IS, fale com o suporte.</p>
 </blockquote>
