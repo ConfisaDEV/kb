@@ -2,13 +2,12 @@
 title: Reforma Tributária no Confisa (IBS e CBS)
 description: 
 published: true
-date: 2026-10-30T16:41:42.062Z
+date: 2026-10-30T16:50:29.248Z
 tags: 
 editor: ckeditor
 dateCreated: 2026-10-29T16:20:36.985Z
 -->
 
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 <h1>Reforma Tributária no dia a dia</h1>
 <p>Este artigo explica, de um jeito simples, o que muda no Confisa com a Reforma Tributária e como trabalhar com isso no dia a dia.</p>
@@ -95,7 +94,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
   <p>👤 <strong>Não sabe o regime da sua empresa?</strong> Pergunte ao contador. Ele também diz se vale a pena alguma mudança para 2027.</p>
 </blockquote>
 <hr>
-<h2>1. O que muda em janeiro de 2027?</h2>
+<h2><mark class="marker-yellow">1. O que muda em janeiro de 2027?</mark></h2>
 <h3><strong>Os impostos</strong></h3>
 <figure class="table" style="width:auto;">
   <table style="background-color:rgb(255, 255, 255);border-bottom:0px solid rgba(0, 0, 0, 0.08);border-left:0px solid rgba(0, 0, 0, 0.08);border-right:0px solid rgba(0, 0, 0, 0.08);border-top:0px solid rgba(0, 0, 0, 0.08);">
@@ -242,7 +241,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
   <p>⚠️ A alíquota do exemplo (9,1%) é uma estimativa. A alíquota oficial da CBS de 2027 ainda vai ser divulgada pelo governo.</p>
 </blockquote>
 <hr>
-<h2>2. Como definir o preço e a margem?</h2>
+<h2><mark class="marker-yellow">2. Como definir o preço e a margem?</mark></h2>
 <h3><strong>A regra mais importante</strong></h3>
 <p><strong>O preço da tabela é o preço de venda com o ICMS dentro e sem o IBS/CBS.</strong> Na venda, o sistema soma o IBS/CBS por fora.</p>
 <blockquote>
@@ -280,8 +279,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
 </ul>
 <p>Quando sair uma alíquota nova de IBS/CBS, <strong>não precisa mudar o preço</strong> para manter a margem: o sistema soma o IBS/CBS novo por fora. 👤 Atualize as alíquotas na tela <strong>Configurações de regras da tributação fiscal (CAD0231)</strong>, inclusive na aba <strong>Padrão</strong>. Quem informa é o contador.</p>
 <hr>
-<h2>&nbsp;</h2>
-<h2>3. Vendo para estados com ICMS diferente. Como faço?</h2>
+<h2><mark class="marker-yellow">3. Vendo para estados com ICMS diferente. Como faço?</mark></h2>
 <h3><strong>O problema</strong></h3>
 <p>O ICMS fica <strong>dentro</strong> do preço de venda. Com o mesmo preço, <strong>o que sobra para a empresa muda</strong> conforme o ICMS:</p>
 <figure class="table" style="width:auto;">
@@ -345,8 +343,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
   <p>👤 <strong>Consumidor final de outro estado</strong> (cliente sem inscrição estadual) tem uma regra de ICMS diferente. Se você vende para esse público, crie uma tabela só para ele e confirme a alíquota com o contador.</p>
 </blockquote>
 <hr>
-<h2>&nbsp;</h2>
-<h2>4. Natureza e tipo de operação já na venda</h2>
+<h2><mark class="marker-yellow">4. Natureza e tipo de operação já na venda</mark></h2>
 <h3><strong>O que mudou</strong></h3>
 <p>Antes, os impostos eram decididos <strong>só na nota</strong>. Agora, o orçamento e o pedido <strong>já calculam os impostos</strong>, e para isso precisam saber que tipo de venda é. Por isso, dois campos precisam estar preenchidos na venda:</p>
 <figure class="table" style="width:auto;">
@@ -392,22 +389,39 @@ dateCreated: 2026-10-29T16:20:36.985Z
   <p>⚠️ <strong>Sem natureza ou sem tipo de operação, o pedido não calcula o IBS/CBS</strong>, e o total sai sem ele. O sistema avisa ao salvar, mas deixa salvar.</p>
 </blockquote>
 <hr>
-<h2>&nbsp;</h2>
-<h2>5. Como fica o app do representante?</h2>
-<blockquote>
-  <p>ℹ️ Esta parte ainda está sendo ajustada e depende da versão do app. Confira com o suporte como está o seu.</p>
-</blockquote>
+<h2><mark class="marker-yellow">5. Como fica o app do representante?</mark></h2>
+<h3><strong>O que a empresa precisa fazer</strong></h3>
+<ol>
+  <li><strong>Crie as tabelas de preço</strong> por alíquota de ICMS (ou por estado). Como montar o preço está no tópico 2, e como criar uma tabela para cada alíquota, no tópico 3.</li>
+  <li><strong>Defina qual tabela cada representante vai usar</strong> para vender. Assim ele vende com o preço da alíquota de ICMS certa para os clientes dele.</li>
+</ol>
+<h3><strong>O que o representante vê no app</strong></h3>
 <ul>
-  <li>O app usa o <strong>Preço</strong> da tabela, que é o preço de venda <strong>sem o IBS/CBS</strong>.</li>
-  <li><strong>Quando o pedido chega no sistema</strong>, o sistema soma o IBS/CBS por fora e grava os valores oficiais. Por isso, <strong>o total do pedido no sistema fica maior que o total mostrado no app</strong>, pela diferença do IBS/CBS.</li>
-  <li>Avise os representantes: o valor que o cliente vai pagar é o do pedido no sistema, com o IBS/CBS.</li>
+  <li>O <strong>preço de venda</strong> da tabela.</li>
+  <li>O <strong>valor com os tributos</strong> (IBS/CBS) já calculado, para mostrar ao cliente quanto ele vai pagar.</li>
 </ul>
+<h3><strong>Os tributos do app são aproximados</strong></h3>
+<p>O app usa os tributos <strong>calculados na tabela de preço</strong>, que são uma <strong>estimativa</strong> (tópico 2).</p>
+<p>Quando a empresa <strong>fatura o pedido</strong>, o sistema aplica os impostos devidos daquela venda, conforme:</p>
+<ul>
+  <li>a <strong>natureza de operação</strong>;</li>
+  <li>o <strong>CST</strong>;</li>
+  <li>o <strong>NCM</strong> do produto;</li>
+  <li>o <strong>regime tributário</strong> da empresa e do cliente;</li>
+  <li>o <strong>estado</strong> do cliente;</li>
+  <li>se o cliente é <strong>consumidor final</strong>;</li>
+  <li><strong>diferimento</strong> e <strong>reduções</strong> de base ou de alíquota;</li>
+  <li>entre outros, como data, frete e desconto.</li>
+</ul>
+<p>Por isso, <strong>o valor pode sofrer reajuste no faturamento</strong> em relação ao que apareceu no app.</p>
+<blockquote>
+  <p>💡 <strong>Avise os representantes:</strong> o valor mostrado no app é uma aproximação. O valor que vale é o do pedido faturado pela empresa.</p>
+</blockquote>
 <blockquote>
   <p>⚠️ O pedido do app chega sem natureza e pega a <strong>natureza padrão</strong> do cliente ou do estado (tópico 4). Sem natureza padrão, o pedido fica sem IBS/CBS.</p>
 </blockquote>
 <hr>
-<h2>&nbsp;</h2>
-<h2>6. Configurações: para que serve cada uma</h2>
+<h2><mark class="marker-yellow">6. Configurações: para que serve cada uma</mark></h2>
 <p>Ficam na tela <strong>Cadastro de filiais/empresas (CAD0019)</strong>, aba <strong>Configurações adicionais</strong>, e valem para a filial.</p>
 <blockquote>
   <p>⚠️ <strong>Depois de mudar uma configuração, feche e abra o sistema.</strong></p>
@@ -539,8 +553,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
   <p>🚫 <strong>Não mude esta configuração por conta própria.</strong> Ela muda o ICMS que a empresa recolhe. Só passe para <strong>Não</strong> com <strong>orientação por escrito do contador</strong>, e só quando a empresa tiver <strong>decisão judicial</strong> ou o estado tiver <strong>regra própria</strong>. Mudar sem isso pode gerar ICMS recolhido a menos e problema com a fiscalização.</p>
 </blockquote>
 <hr>
-<h2>&nbsp;</h2>
-<h2>7. O ICMS é cobrado em cima do IBS/CBS?</h2>
+<h2><mark class="marker-yellow">7. O ICMS é cobrado em cima do IBS/CBS?</mark></h2>
 <h3><strong>O que é</strong></h3>
 <p>A partir de 2027, o cliente paga o <strong>preço de venda + o IBS/CBS</strong>. A dúvida é: o ICMS é calculado sobre <strong>tudo o que o cliente paga</strong> (com o IBS/CBS) ou <strong>só sobre o preço de venda</strong> (sem o IBS/CBS)?</p>
 <ul>
@@ -548,7 +561,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
   <li><strong>Só sobre o preço de venda:</strong> só quando um <strong>estado</strong> definir assim, ou quando a empresa tiver uma <strong>decisão judicial</strong>. 👤</li>
 </ul>
 <blockquote>
-  <p>🚫 <strong>Isto não é uma escolha do dia a dia.</strong> A empresa não decide se quer ou não pagar ICMS sobre o IBS/CBS: quem define é a lei, o estado ou a Justiça. <strong>Deixe na regra geral (Sim)</strong> e só mude com <strong>orientação por escrito do contador</strong> e com a decisão judicial ou a regra do estado em mãos. Também não mude para "testar" ou para "baixar o preço": o ICMS recolhido fica errado.</p>
+  <p><mark class="pen-red">🚫 <strong>Isto não é uma escolha do dia a dia.</strong> A empresa não decide se quer ou não pagar ICMS sobre o IBS/CBS: quem define é a lei, o estado ou a Justiça. <strong>Deixe na regra geral (Sim)</strong> e só mude com <strong>orientação por escrito do contador</strong> e com a decisão judicial ou a regra do estado em mãos. Também não mude para "testar" ou para "baixar o preço": o ICMS recolhido fica errado.</mark></p>
 </blockquote>
 <h3><strong>Exemplo</strong></h3>
 <p>Preço de venda 100,00, ICMS 12% e IBS/CBS 9,1%:</p>
@@ -622,8 +635,7 @@ dateCreated: 2026-10-29T16:20:36.985Z
   <p>ℹ️ Isso vale para o ICMS normal. A substituição tributária e o diferencial de alíquota continuam sobre o valor inteiro.</p>
 </blockquote>
 <hr>
-<h2>&nbsp;</h2>
-<h2>8. Cuidados na virada do ano</h2>
+<h2><mark class="marker-yellow">8. Cuidados na virada do ano</mark></h2>
 <h3><strong>A data de entrega é a que vale</strong></h3>
 <p>O imposto do pedido segue a <strong>data de entrega</strong>. Sem data de entrega, vale a data do pedido.</p>
 <p><strong>Exemplo:</strong> um pedido feito em <strong>dezembro de 2026</strong> para entregar em <strong>janeiro de 2027</strong> já sai com as regras de 2027, e <strong>o total soma o IBS/CBS</strong>. Se a entrega voltar para 2026, o IBS/CBS sai, e o total cai.</p>
@@ -653,9 +665,8 @@ dateCreated: 2026-10-29T16:20:36.985Z
 <p><strong>Exemplo:</strong> 87,05 + 12,95 + 7,92 = <strong>107,92</strong> ✔</p>
 <p>Diferença de 1 centavo é arredondamento. Mais do que isso, anote o número do pedido ou da nota e fale com o suporte.</p>
 <hr>
-<h2>&nbsp;</h2>
-<h2>9. Dúvidas comuns</h2>
-<h3><strong>Por que o "Total sem tributos" é menor que o "Vlr. Unit."?</strong></h3>
+<h2><mark class="marker-yellow">9. Dúvidas comuns</mark></h2>
+<h3><br><strong>Por que o "Total sem tributos" é menor que o "Vlr. Unit."?</strong></h3>
 <p>Porque o <strong>Vlr. Unit.</strong> já tem o <strong>ICMS dentro</strong>. Ele está sem o IBS/CBS, mas não está sem tributos.</p>
 <p>O <strong>Total sem tributos</strong> tira <strong>todos</strong> os impostos: o ICMS <strong>e</strong> o IBS/CBS.</p>
 <figure class="table" style="width:auto;">
@@ -683,21 +694,13 @@ dateCreated: 2026-10-29T16:20:36.985Z
   </table>
 </figure>
 <p><strong>Exemplo:</strong> Vlr. Unit. <strong>100,00</strong> → Total sem tributos <strong>87,05</strong>. A diferença, <strong>12,95</strong>, é o ICMS.</p>
-<h3>&nbsp;</h3>
-<h3>&nbsp;</h3>
-<h3><strong>Dei desconto e o "Total sem tributos" não mudou</strong></h3>
+<h3><br><br>Dei desconto e o "Total sem tributos" não mudou</h3>
 <p><strong>Está certo.</strong> O desconto <strong>diminui o que o cliente paga e o IBS/CBS</strong>, mas o "Total sem tributos" é calculado sobre o preço <strong>antes</strong> do desconto, igual à nota. Ele só muda quando o próprio Vlr. Unit. muda.</p>
-<h3>&nbsp;</h3>
-<h3>&nbsp;</h3>
-<h3><strong>Troquei o cliente de estado e o total mudou um pouco</strong></h3>
+<h3><br><strong>Troquei o cliente de estado e o total mudou um pouco</strong></h3>
 <p><strong>Está certo.</strong> O Vlr. Unit. não muda, mas o IBS/CBS é calculado depois de tirar o ICMS. Com outro ICMS, o IBS/CBS muda, e o total muda junto (tópico 3).</p>
-<h3>&nbsp;</h3>
-<h3>&nbsp;</h3>
-<h3><strong>A tabela mostra um "Vlr. com Tributos" e o pedido mostrou outro</strong></h3>
+<h3><br><strong>A tabela mostra um "Vlr. com Tributos" e o pedido mostrou outro</strong></h3>
 <p>É normal ter alguns centavos de diferença. A tabela faz uma estimativa, e o pedido faz a mesma conta da nota (tópico 2). <strong>O que vale é o valor do pedido.</strong></p>
-<h3>&nbsp;</h3>
-<h3>&nbsp;</h3>
-<h3><strong>Mudei uma configuração e nada mudou</strong></h3>
+<h3><br><strong>Mudei uma configuração e nada mudou</strong></h3>
 <p><strong>Feche e abra o sistema.</strong> As telas só leem as configurações quando são abertas.</p>
-<hr>
+<p>&nbsp;</p>
 <p><i>Este material é atualizado conforme as regras da reforma mudam.</i></p>
